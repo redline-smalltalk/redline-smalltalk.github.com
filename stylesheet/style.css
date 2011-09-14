@@ -182,7 +182,7 @@ a#email {
 }
 
 a#email:hover {
-background-image:url(/image/email-hover.png);
+  background-image:url(/image/email-hover.png);
 }
 
 a#twitter {
