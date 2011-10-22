@@ -6,7 +6,7 @@ published: true
 ---
 It seemed appropriate that the first post to the Redline Smalltalk Blog was about Redline and what is in it for you. So I took a hypothetical “fan letter” to Redline Smalltalk from my "other Blog":http://www.jamesladdcode.com/ and put it here (see below).  Work continues on Redline with the parser complete and bytecode generation in full swing.  The Smalltalk runtime is  being ported from the Pharo Smalltalk sources and development continues on the Eclipse Plugin.
 
-!/image/blog/fans.jpg(Fans at a concert)!
+p=. !/image/blog/fans.jpg(Fans at a concert)!
 
 I was inspired by "this post by Kent Beck":http://www.threeriversinstitute.org/blog/?p=445 to write a fan letter to Redline Smalltalk, written in the voice of a deliriously satisfied user. This is an excellent way of articulating a vision.
 
