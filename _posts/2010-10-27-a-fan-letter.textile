@@ -1,5 +1,6 @@
 ---
 title: A Fan Letter to Redline Smalltalk...
+author: James Ladd
 layout: post
 published: true
 ---
