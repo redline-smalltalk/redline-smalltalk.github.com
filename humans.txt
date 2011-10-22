@@ -17,6 +17,28 @@
   Twitter: @RobDaemon
   Location: Long Beach, California
 
+/* THANKS */
+  To the ever expanding inspiration and support team:
+    Steven R. Baker
+    Kent Beck 
+    Bill Birch
+    David Brady
+    Ashley Cambrell
+    Stéphane Ducasse
+    Simon Harris
+    Steve Hayes
+    Daniel Ingalls
+    David Kemp
+    Amanda Koh
+    Pat Maddox  
+    Charles Oliver Nutter
+    Eddy Pronk
+    James Robertson 
+    John Sherwood
+    Guy Steele
+    Slava Ustovitskiy
+    Fionna Yao
+
 /* SITE */
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery
