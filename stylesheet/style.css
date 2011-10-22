@@ -24,7 +24,7 @@ html, body {
 }
 
 .clearfix {
-  display: inline-block;
+    display: inline-block;
 }
 
 .clearfix:after {
