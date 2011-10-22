@@ -1,0 +1,26 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+  Mr: Sean T. Allen
+  Site: http://www.monkeysnatchbanana.com/
+  Twitter: @SeanTAllen
+  Location: Brooklyn, New York
+
+  Mr: James Ladd
+  Site: http://jamesladdcode.com/
+  Twitter: @JamesLadd
+  Location: Melbourne, Australia
+
+  Mr: Rob Roland
+  Site: http://robertroland.org/
+  Twitter: @RobDaemon
+  Location: Long Beach, California
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software: Jekyll, Github Pages, Emacs, Git
+  
+
+                                    
