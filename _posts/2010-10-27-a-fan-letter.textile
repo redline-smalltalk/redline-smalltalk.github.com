@@ -1,0 +1,29 @@
+---
+title: A Fan Letter to Redline Smalltalk...
+layout: post
+published: true
+---
+It seemed appropriate that the first post to the Redline Smalltalk Blog was about Redline and what is in it for you. So I took a hypothetical “fan letter” to Redline Smalltalk from my "other Blog":http://www.jamesladdcode.com/ and put it here (see below).  Work continues on Redline with the parser complete and bytecode generation in full swing.  The Smalltalk runtime is  being ported from the Pharo Smalltalk sources and development continues on the Eclipse Plugin.
+
+!/image/blog/fans.jpg(Fans at a concert)!
+
+I was inspired by "this post by Kent Beck":http://www.threeriversinstitute.org/blog/?p=445 to write a fan letter to Redline Smalltalk, written in the voice of a deliriously satisfied user. This is an excellent way of articulating a vision.
+
+Dear Redline Smalltalk,
+
+I have been using Redline Smalltalk at work and in personal projects for a while now and I just had to let you know what a joy it is to use and how productive I am with it.
+
+My work situation means I have to work on the Java Virtual Machine and I have been looking at alternatives to Java so I could be as productive as possible and stay away from those little Java annoyances and hurdles that slow me down. Having a background in Smalltalk I jumped at the chance to put your Redline Smalltalk through its paces and I have to say I couldn’t tell the difference between your Smalltalk and the others, in fact I think yours was a little faster.
+
+At home I like to use IntelliJ and your plug-in support in the IDE is brilliant, the mix of old style Smalltalk-80 browser, refactoring and file based support is smooth and complete and just what I needed, especially the source level debugging and profiling which I could not live without.  At work we use Eclipse and I can’t tell the difference between the plug-ins so now I’m getting a few other developers to try it, and I think I made some converts.
+
+One developer at work, Steve, keeps banging on about how Ruby On Rails is this and how Ruby On Rails is that, how we need rspec, gem, rake, and how awesome it is to script things and try stuff out with irb. You should have seen his jaw drop when I showed him how I can do all that in Redline and how quickly I could create, test and deploy my Seaside Web App and then push changes to different environments with a simple commit, even while they were running. You really did think of everything to make things complete and integrated with Smalltalk everywhere.
+
+I wondered what you could add in the next release and I just can’t think of anything but if I do, Ill be sure to let you know.
+
+Thanks for a wonderful product that has really changed the way I work and made it fun again.
+
+Regards,
+
+John Q. Geek.
+
