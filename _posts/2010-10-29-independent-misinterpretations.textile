@@ -1,5 +1,5 @@
 ---
-title: Independent Misinterpretations 7- Redline Smalltalk
+title: Independent Misinterpretations 7
 summary: James' appearance on episode 7 of the Independent Misinterpretations podcast.
 author: James Ladd
 layout: post
