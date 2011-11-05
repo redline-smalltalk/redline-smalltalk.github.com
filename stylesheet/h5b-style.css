@@ -240,130 +240,16 @@ footer {
   margin-left:70px;
 }
 
-#download, #community, #documents {
-  height:213px;
-  padding:0 10px 0 45px;
-  margin:30px 0 0 0;
-  width:120px;
-  float: left;
+nav {
+  display:block; 
+  overflow:auto;
 }
 
-#download a, #community a, #documents a {
-  display:block;
-  border:none;
-  height:40px;
-  margin:0 0 0 15px;
-  padding:15px 0 0 55px;
-  width:50px;
+nav a {
+  float:left;
+  text-align:center;
+  width:16%;
 }
-
-#download {
-  margin-left:75px;
-  background:url(/image/download.png) no-repeat left top;
-  float: left;
-}       
-
-#download:hover {
-  background:url(/image/download-hover.png) no-repeat 0 0;
-}
-
-#download a {
-  background:url(/image/download-icon.png) no-repeat 0 0;
-}
-
-#download a:hover {
-  background-image:url(/image/download-icon-hover.png);
-}
-
-#community {
-  margin-left:45px;
-  background:url(/image/community.png) no-repeat left top;
-  float: left;
-}
-        
-#community:hover {
-  background:url(/image/community-hover.png) no-repeat 0 0;
-}
-
-#community a:hover, #download a:hover, #documents a:hover {
-  color:#DA1F26
-}
-
-a#email {
-  background:url(/image/email.png) no-repeat 0 0;
-}
-
-a#email:hover {
-  background-image:url(/image/email-hover.png);
-}
-
-a#twitter {
-  background:url(/image/twitter.png) no-repeat 0 0;
-} 
-
-a#twitter:hover {
-  background:url(/image/twitter-hover.png) no-repeat 0 0;
-} 
-
-a#news {
-  background:url(/image/news.png) no-repeat 0 0;
-}
-
-a#news:hover {
-  background:url(/image/news-hover.png) no-repeat 0 0;
-}
-
-a#discussion {
-  background:url(/image/discussion.png) no-repeat 0 0;
-}
-
-a#discussion:hover {
-  background:url(/image/discussion-hover.png) no-repeat 0 0;
-}
-
-#documents {
-  margin-left:55px;
-  background:url(/image/documents.png) no-repeat left top;
-  float: left;
-}
-
-#documents:hover {
-  background:url(/image/documents-hover.png) no-repeat 0 0;
-}
-
-a#guides {
-  background:url(/image/docs-icon.png) no-repeat 0 0;
-}
-
-a#guides:hover {
-  background-image:url(/image/docs-icon-hover.png);
-}
-
-a#books {
-  background:url(/image/docs-icon.png) no-repeat 0 0;
-}
-
-a#books:hover {
-  background-image:url(/image/docs-icon-hover.png);
-}
-
-a#faq {
-  background:url(/image/docs-faq.png) no-repeat 0 0;
-}
-
-a#faq:hover {
-  background:url(/image/docs-faq-hover.png) no-repeat 0 0;
-}
-
-a#thanks {
-  background:url(/image/docs-thanks.png) no-repeat 0 0;
-}
-
-a#thanks:hover {
-  background:url(/image/docs-thanks-hover.png) no-repeat 0 0;
-}
-
-
 
 /* =============================================================================
    Non-semantic helper classes
