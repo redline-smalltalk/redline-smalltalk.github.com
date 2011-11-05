@@ -1,5 +1,6 @@
 ---
 title: A Fan Letter to Redline Smalltalk...
+summary: A letter from the future reminding us of where want to be someday.
 author: James Ladd
 layout: post
 published: true
