@@ -230,6 +230,10 @@ footer {
   display: block;
 }
 
+nav[role='blog'] li {
+  list-style:disc
+}
+
 /* homepage */
 
 #elevator-pitch {
