@@ -234,6 +234,11 @@ nav[role='blog'] li {
   list-style:disc
 }
 
+nav[role='blog'] ol {
+  margin: 0 1.5em 1.5em 0;
+  padding-left: 3.333em;
+}
+
 /* homepage */
 
 #elevator-pitch {
