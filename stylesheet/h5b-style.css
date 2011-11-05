@@ -240,12 +240,12 @@ footer {
   margin-left:70px;
 }
 
-nav {
+nav[id=homepage] {
   display:block; 
   overflow:auto;
 }
 
-nav a {
+nav[id=homepage] a {
   float:left;
   text-align:center;
   width:16%;
