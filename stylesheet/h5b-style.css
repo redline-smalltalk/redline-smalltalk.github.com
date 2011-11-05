@@ -243,6 +243,12 @@ nav[role='blog'] ol {
   padding-left: 3.333em;
 }
 
+article img[class='left'] {
+  float: left;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
 /* homepage */
 
 #elevator-pitch {

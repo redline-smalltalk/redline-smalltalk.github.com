@@ -1,0 +1,12 @@
+---
+title: The Journey So Far...
+summary: Video of James and Sean's presentation at Smalltalk Solutions 2011.
+author: Sean T. Allen
+layout: post
+published: true
+---
+<img src="/image/blog/jedi-cloak.jpg" title="Jedi Cloak" alt="Jedi Cloak" class="left">  
+
+Our "presentation from Smalltalk Solutions 2011":http://vimeo.com/channels/186668#22084832 is now available. It's an excellent primer on what we want to accomplish with Redline. Plus, as an added bonus, you get to see us dressed up as Jedi Knights.
+
+Enjoy.
