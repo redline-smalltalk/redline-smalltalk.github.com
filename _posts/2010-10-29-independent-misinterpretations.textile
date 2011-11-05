@@ -1,0 +1,8 @@
+---
+title: Independent Misinterpretations 7- Redline Smalltalk
+summary: James' appearance on episode 7 of the Independent Misinterpretations podcast.
+author: James Ladd
+layout: post
+published: true
+---
+Check out my appearance on "episode 7 of Independent Misinterpretations":http://www.jarober.com/blog/blogView?entry=3468391491 – a Smalltalk and dynamic language oriented podcast with "James Robertson":http://www.jarober.com/, "Michael Lucas-Smith":http://www.michaellucassmith.com/, and "David Buck":http://www.cincomsmalltalk.com/userblogs/buck/blogView.
