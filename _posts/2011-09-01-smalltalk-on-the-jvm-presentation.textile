@@ -1,0 +1,17 @@
+---
+title: Smalltalk on the JVM
+summary: James' presentation at ESUG 2011
+author: Sean T. Allen
+layout: post
+published: true
+---
+<img src="/image/blog/esug-logo-2011.png" alt="ESUG 2011 Logo" title="ESUG 2011 Logo" class="left">
+
+The slides from James' 2011 ESUG presentation "'Smalltalk on the JVM'":http://www.slideshare.net/esug/smalltalk-on-the-jvm are now available.
+
+The presentation covered the challenges that we've had implementing a dynamic language like Smalltalk on the JVM and how we've gone about addressing those issues. While we certainly aren't alone in having gone through these struggles and aren't the only one's to document it, we hope our experiences end up helping someone else down the road. 
+
+If you are looking to get a quick overview of how Redline works internally, this presentation could be an excellent resource.
+
+Hopefully video will be coming soon. I'll update this entry when it is available.
+
