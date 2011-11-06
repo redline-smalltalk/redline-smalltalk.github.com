@@ -235,13 +235,23 @@ footer {
   display: block;
 }
 
-nav[role='blog'] li {
-  list-style:disc
+nav[role='site'] {
+  line-height: 47px;
+  text-align: center;
+}
+
+nav[role='site'] a {
+  float: left;
+  width: 16%;
 }
 
 nav[role='blog'] ol {
   margin: 0 1.5em 1.5em 0;
   padding-left: 3.333em;
+}
+
+nav[role='blog'] li {
+  list-style:disc
 }
 
 article img[class='left'] {
@@ -258,17 +268,6 @@ article img[class='left'] {
   color:#444;
   width:650px;
   margin-left:70px;
-}
-
-nav[id=homepage] {
-  display:block; 
-  overflow:auto;
-}
-
-nav[id=homepage] a {
-  float:left;
-  text-align:center;
-  width:16%;
 }
 
 /* =============================================================================
