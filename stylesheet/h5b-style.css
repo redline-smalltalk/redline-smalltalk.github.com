@@ -239,6 +239,7 @@ footer {
 
 nav[role='site'] a {
   color: #444;
+  text-decoration: none;
 }
 
 nav[role='site'] li {
