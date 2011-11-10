@@ -7,6 +7,6 @@ published: true
 ---
 <img src="/image/blog/jedi-cloak.jpg" title="Jedi Cloak" alt="Jedi Cloak" class="left">  
 
-Our "presentation from Smalltalk Solutions 2011":http://vimeo.com/channels/186668#22084832 is now available. It's an excellent primer on what we want to accomplish with Redline. Plus, as an added bonus, you get to see us dressed up as Jedi Knights.
+Our "presentation from Smalltalk Solutions 2011":http://vimeo.com/channels/186668#22084832 is now available. It's an excellent primer on what we want to accomplish with Redline. Plus, as an added bonus, you get to see us dressed up as Jedi Knights. For the more adventurous amongst you, try your hand at maching the "slides":http://www.slideshare.net/seantallen/redline-smalltalk-the-journey-so-far to video.
 
 Enjoy.
