@@ -213,28 +213,16 @@ body {
   padding: 0;
 }
 
-
 #main {
   padding: 30px 0 40px 8%;
   position: relative;
   margin: 0;
-  border-left: #DB0E0E 1px solid;
   clear: left;
 }
 
-footer {
-  height: 16px;
-  clear: both;
-  padding: 20px 0;
-  text-align: center;
-  display: block;
-  margin-top: -3px;
-  background: url(/image/bottomline.png) top left no-repeat;
-}
-
-#logo {
-  display: block;
+#sitenav li {
   float: left;
+  text-align: center;
 }
 
 #sitenav a {
@@ -242,11 +230,19 @@ footer {
   text-decoration: none;
 }
 
-#sitenav li {
-  float: left;
-  line-height: 47px;
-  padding-left: 7%;
+footer {
+  height: 16px;
+  clear: both;
+  padding: 20px 0;
   text-align: center;
+  margin-top: -3px;
+}
+
+#github-badge {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  border: 0;
 }
 
 #blognav ol {
@@ -319,6 +315,57 @@ article img[class='left'] {
 
 }
 
+@media only screen and (max-width: 650px) {
+  #sitenav li {
+    width: 100%;
+  }
+
+  #github-badge {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 651px) and (max-width: 768px) {
+  #sitenav li {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1099px) {
+  #sitenav li {
+    width: 33%;
+  }
+}
+
+@media only screen and (max-width: 1099px){
+  #logo {
+    display: none;
+  }
+
+  #sitenav {
+    clear:both;
+  }
+}
+
+@media only screen and (min-width: 1100px) { 
+  #logo {
+    display: inline;
+    float: left;
+  }
+
+  #sitenav li {
+    padding-left: 7%;
+    line-height: 47px;
+  }
+  
+  #main {
+    border-left: #DB0E0E 1px solid;
+  }
+
+  footer {
+    background: url(/image/bottomline.png) top left no-repeat;
+  }
+}
 
 /* =============================================================================
    Print styles.
