@@ -237,24 +237,24 @@ footer {
   float: left;
 }
 
-nav[role='site'] a {
+#sitenav a {
   color: #444;
   text-decoration: none;
 }
 
-nav[role='site'] li {
+#sitenav li {
   float: left;
   line-height: 47px;
   padding-left: 7%;
   text-align: center;
 }
 
-nav[role='blog'] ol {
+#blognav ol {
   margin: 0 1.5em 1.5em 0;
   padding-left: 3.333em;
 }
 
-nav[role='blog'] li {
+#blognav li {
   list-style:disc
 }
 
