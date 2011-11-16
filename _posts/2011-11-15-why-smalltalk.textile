@@ -1,0 +1,22 @@
+---
+title: Why Smalltalk?
+summary: Sean's first stumbling attempt at addressing the ever present 'Why Smalltalk?' question
+author: Sean T. Allen
+layout: post
+published: true
+---
+Earlier today, the 'Why Smalltalk?' question came up on the "Redline Smalltalk mailing list":http://groups.google.com/group/redline-smalltalk. What follows is the question as it was asked and my first stumbling attempt at answering it.
+ 
+_What makes Smalltalk special enough that you strongly feel it's better suited than the usual suspects for software development?_
+
+That would be a very lengthy answer and honestly, I don't think it would matter. Words are not really going do justice. I used Smalltalk every day for about 9 months before it suddenly hit me how much more productive I was with it than most languages I had ever used.
+
+I could talk about doing debugger driven development where you write the tests or client code and just it the code and then proceed to add all the supporting methods from the debugger and just restart from point X and how powerful have resumable exceptions are and what amazing things 'thisContext' brings but unless you've used it and experienced it for a while, that isn't going to mean much.
+
+I could talk about how in many ways Smalltalk is similar to Ruby but in my opinion, a 'saner' ruby- I am very productive in Ruby as a language and can see being even more productive with a file based Smalltalk sans the environment because of those 'sanity' checks.
+
+I could talk about how powerful the Smalltalk integrated environment is for doing development and how eventually I want to have the option for the same in Redline while maintaining being able to interoperate with a file based world.
+
+And all that just scratches the surface.
+
+It is however a question I need to try and find a succinct way to answer as the Redline site is going to need to answer it. I originally avoided answering that part of the question because I don't have a good succinct answer. The is an attempt at a succinct answer and I think it sucks. But, I am working on it.
