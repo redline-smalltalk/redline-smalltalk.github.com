@@ -1,6 +1,6 @@
 ---
 title: Smalltalk on the JVM
-summary: James' presentation at ESUG 2011
+summary: James' presentation at ESUG 2011.
 author: Sean T. Allen
 layout: post
 published: true
