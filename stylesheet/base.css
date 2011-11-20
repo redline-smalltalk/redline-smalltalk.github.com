@@ -225,7 +225,7 @@ header[role='banner'] {
 }
 
 #main {
-  padding: 30px 0 40px 8%;
+  padding: 30px 8% 40px 8%;
   position: relative;
   margin: 0;
   clear: left;
