@@ -278,10 +278,10 @@ article img[class='left'] {
 /* homepage */
 
 #elevator-pitch {
-  font-size: 36px;
+  font-size: 24px;
   text-shadow:0px 0px 4px #ccc;
   color:#444;
-  width:80%;
+  padding: 0 10% 0 10%;
 }
 
 /* =============================================================================
