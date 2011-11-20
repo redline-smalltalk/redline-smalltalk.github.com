@@ -231,6 +231,10 @@ header[role='banner'] {
   clear: left;
 }
 
+#sitenav {
+  padding-left: 10%;
+}
+
 #sitenav li {
   float: left;
   text-align: center;
@@ -327,11 +331,15 @@ article img[class='left'] {
 }
 
 @media only screen and (max-width: 650px) {
+  #sitenav {
+    padding-left: 0%;
+  }
+
   #sitenav li {
     width: 100%;
   }
 
-  #github-badge {
+  #github-ribbon {
     display: none;
   }
 }
