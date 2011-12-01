@@ -1,0 +1,14 @@
+---
+title: Why Smalltalk? (Slight Return)
+summary: James' answer 'Why Smalltalk?' question.
+author: Sean T. Allen
+layout: post
+published: true
+---
+A while back, the 'Why Smalltalk?' question came up on the "Redline Smalltalk mailing list":http://groups.google.com/group/redline-smalltalk. What follows is the question as it was asked and James' answer to it. A couple weeks past, I posted "my response": and meant to post James' but work and Redline got in the way of posting this.
+ 
+_What makes Smalltalk special enough that you strongly feel it's better suited than the usual suspects for software development?_
+
+I think Smalltalk is more productive because there is less to remember, everything is a message to an object. This message passing is everywhere - it is the language itself. When you remember this you can do anything the language and runtime allows. Conversely languages where you need to understand the runtime in addition to language syntax require more brain power. I'd like to save that brain power for the problem at hand rather than the tooling I'm using to solve the problem.
+
+To me, this is one of the brilliant things about lisp, almost everything is expressed in a uniform way. Is Smalltalk  better than Lisp? Of course, and of course not. It depends on how you think and which problem you are trying to solve.
