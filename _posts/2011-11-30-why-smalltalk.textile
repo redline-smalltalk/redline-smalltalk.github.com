@@ -5,7 +5,7 @@ author: Sean T. Allen
 layout: post
 published: true
 ---
-A while back, the 'Why Smalltalk?' question came up on the "Redline Smalltalk mailing list":http://groups.google.com/group/redline-smalltalk. What follows is the question as it was asked and James' answer to it. A couple weeks past, I posted "my response": and meant to post James' but work and Redline got in the way of posting this.
+A while back, the 'Why Smalltalk?' question came up on the "Redline Smalltalk mailing list":http://groups.google.com/group/redline-smalltalk. What follows is the question as it was asked and James' answer to it. A couple weeks past, I posted "my response":http://www.redline.st/blog/2011/11/15/why-smalltalk.html and meant to post James' but work and Redline got in the way of posting this.
  
 _What makes Smalltalk special enough that you strongly feel it's better suited than the usual suspects for software development?_
 
