@@ -327,7 +327,6 @@ article img[class='left'] {
 
 .rename-me {
   float: left;
-  width: 33%;
 }
 
 .rename-me header {
@@ -392,11 +391,19 @@ article img[class='left'] {
   #github-ribbon {
     display: none;
   }
+
+  .rename-me {
+    width: 100%;
+  }  
 }
 
 @media only screen and (min-width: 651px) and (max-width: 768px) {
   #sitenav li {
     width: 50%;
+  }
+
+  .rename-me {
+    width: 100%;
   }
 }
 
@@ -404,13 +411,16 @@ article img[class='left'] {
   #sitenav li {
     width: 25%;
   }
+
+  .rename-me {
+    width: 33%;
+  }
 }
 
 @media only screen and (max-width: 1099px){
   #sitenav {
     clear:both;
   }
-}
 }
 
 /* =============================================================================
