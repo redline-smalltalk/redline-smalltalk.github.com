@@ -394,6 +394,10 @@ article img[class='left'] {
 
   .rename-me {
     width: 100%;
+  }
+  
+  #elevator-pitch {
+    display: none;
   }  
 }
 
