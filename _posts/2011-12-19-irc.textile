@@ -1,0 +1,18 @@
+---
+title: IRC here we come
+summary: Redline has its own IRC channel on freenode.
+author: Sean T. Allen
+layout: post
+published: true
+---
+<img src="/image/blog/irc.png" title="IRC" alt="IRC" class="left">
+
+Yesterday afternoon "Steven! Ragnarök" asked on the "mailing list":http://groups.google.com/group/redline-smalltalk/browse_thread/thread/4182d7b1b030bba1 if anyone was interested in setting up an IRC channel for Redline. A few minutes and some ChanServ manipulation later and I had registered #redline-st for our usage.
+
+We're a small community right now so it isn't the most active place but, stop on by so you can say "I was there when...". 
+
+Hope to see you there!
+
+*Server:* irc.freenode.net
+*Port:* 6667
+*Channel:* #redline-st
