@@ -201,6 +201,14 @@ table { border-collapse: collapse; border-spacing: 0; }
    Author: 
    ========================================================================== */
 
+a {
+  color: #8F4C09;  
+}
+
+a:visited {
+  color: #8F4C09;  
+}
+
 img {
   max-width: 100%;
 }
