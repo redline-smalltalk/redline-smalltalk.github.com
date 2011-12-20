@@ -1,0 +1,23 @@
+---
+title: The Road to Intelli-J
+summary: Wherein we ask for your support in getting Redline Smalltalk support prioritized by Jet Brains.
+author: Sean T. Allen
+layout: post
+published: true
+---
+<img src="/image/blog/intellij.png" title="IntelliJ Logo" alt="IntelliJ Logo" class="left">  
+
+So this is the skinny: 
+
+At Smalltalk Solutions earlier this year James and I announced that Jet Brains had agreed in principle to add support for Redline Smalltalk to Intelli-J. Well the time is here, we've met the basic requirements originally discussed with Jet Brains early in 2011 for Redline Smalltalk support to make it onto their roadmap. 
+
+ We need your help to get it moved up the priority chain. Jet Brains has a voting system where registered users vote up features they want to see implemented. As of today, there is now one for Redline support. The next step is pretty simple...
+
+We need everyone to sign up for a Jet Brains account ( or login with your Google or Yahoo account ) and "vote for Redline support.":http://youtrack.jetbrains.net/issue/IDEA-79069
+
+* We need you to tweet about it.
+* ... to email people about it.
+* ... to google + about it.
+* ... to stand on the street corner talking about how the world is going to come to an end unless this happens.
+
+This could end up being a big deal for us and your help is greatly appreciated.
