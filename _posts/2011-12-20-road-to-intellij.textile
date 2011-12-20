@@ -21,3 +21,7 @@ We need everyone to sign up for a Jet Brains account ( or login with your Google
 * ... to stand on the street corner talking about how the world is going to come to an end unless this happens.
 
 This could end up being a big deal for us and your help is greatly appreciated.
+
+Update: 
+
+This post is currently on the front page of Hacker News and it has been pointed out, that lacking in context, it could be confusing as to why someone into Smalltalk would care about Intelli-J support. Redline Smalltalk is an implementation of Smalltalk that runs on the JVM, designed to work within the JVM ecosystem. For us, that means that it should work with the tooling that JVM developers are familiar with: Eclipse, Intelli-J et al. There is more information elsewhere on the site, but this site is still a work in progress. If you are interested in learning more, right now your best methods are "the mailing list":http://groups.google.com/group/redline-smalltalk and our brand new "IRC channel":http://webchat.freenode.net/?channels=redline-st.
