@@ -22,6 +22,26 @@ We need everyone to sign up for a Jet Brains account ( or login with your Google
 
 This could end up being a big deal for us and your help is greatly appreciated.
 
-Update: 
+*Update:* 
 
 This post is currently on the front page of Hacker News and it has been pointed out, that lacking in context, it could be confusing as to why someone into Smalltalk would care about Intelli-J support. Redline Smalltalk is an implementation of Smalltalk that runs on the JVM, designed to work within the JVM ecosystem. For us, that means that it should work with the tooling that JVM developers are familiar with: Eclipse, Intelli-J et al. There is more information elsewhere on the site, but this site is still a work in progress. If you are interested in learning more, right now your best methods are "the mailing list":http://groups.google.com/group/redline-smalltalk and our brand new "IRC channel":http://webchat.freenode.net/?channels=redline-st.
+
+*Update Redux:*
+
+Dmitry Jemerov posted the following to the Intelli-J issue for Redline Smalltalk support:
+
+<blockquote>
+As the development lead of IntelliJ IDEA, I would like to clarify the situation and to make expectations a bit more reasonable. The RedLine blog at http://www.redline.st/blog/2011/12/20/road-to-intellij.html says:
+
+"James and I announced that Jet Brains had agreed in principle to add support for Redline Smalltalk to Intelli-J"
+This was not a decision made by JetBrains management. We do not see Smalltalk support bringing any significant business value for the company, and therefore we do not currently have any plans to invest any significant development resources into Smalltalk support, or to bundle Smalltalk support with a future version of IntelliJ IDEA.
+
+What we can actually do is provide some basic foundation for the plugin, using the parser generation tools that we've recently developed, and provide assistance to the community in developing the plugin further.
+
+Unfortunately that decision is very unlikely to be affected by the number of votes for this issue.
+</blockquote>
+
+We want to thank everyone who has voted up this issue so far and ask you to continue doing so in order to demonstrate the support. However, we feel it is important to for everyone to understand the situation as it stands and what your support can and can not accomplish.
+
+The level of support we have received so far as really inspired us and hope to see plenty of you on the mailing list and irc channel in the near future.
+
