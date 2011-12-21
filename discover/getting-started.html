@@ -122,6 +122,20 @@ files in sub-folders that correspond to the namespace of the class or script. So
 </p>
 
 <p>
+If you run 'stic' without arguments you will see some usage information, from which you can see how to run scripts with sources
+and libraries in different locations. The usage looks like this:
+{% highlight bash %}
+usage: stic [options] <source files>
+ -?,--help       print this message.
+ -e <input>      execute the Smalltalk code (enclosed in "" double quotes).
+ -r <path>       where to find Redline. Defaults to environment REDLINE_HOME.
+ -s <paths>      where to find input source files. Separate each path with :.
+                 The paths src/main/smalltalk and src/test/smalltalk are
+                 included by default. Ignored if -e specified.
+ -v,--verbose    output messages about what Redline is doing.
+{% endhighlight %}
+</p>
+<p>
 This process has got the latest Redline Smalltalk source code, built it and ran a Smalltalk example. You may want to put the
 resulting Redline Smalltalk code elsewhere on your system. If you do want to do this then copy the entire redline-deploy folder to
 that location and be sure to set and export the REDLINE_HOME environment variable to that location.
