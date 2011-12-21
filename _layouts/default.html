@@ -23,6 +23,7 @@
   <body>
     <div id="container">
       <header role="banner"></header>
+      {% if page.url != '/index.html' %}
       <nav id="sitenav" role="navigation">
         <ul>
           <li><a href="/" title="Overview">Overview</a></li>
@@ -31,6 +32,8 @@
           <li><a href="/contribute" title="Overview">Contribute</a></li>
         </ul>
       </nav>
+      {% endif %}
+
       <div id="main" role="main">
         {{ content }}
       </div>
