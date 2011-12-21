@@ -305,7 +305,11 @@ article img[class='left'] {
   text-align: center;
 }
 
-.ontology li{
+.ontology ul {
+  padding: 0;
+}
+
+.ontology li {
   list-style: none;
 }
 
