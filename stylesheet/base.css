@@ -300,12 +300,12 @@ article img[class='left'] {
   padding: 0 10% 0 10%;
 }
 
-.rename-me {
+.ontology {
   float: left;
   text-align: center;
 }
 
-.rename-me li{
+.ontology li{
   list-style: none;
 }
 
@@ -368,7 +368,7 @@ article img[class='left'] {
     display: none;
   }
 
-  .rename-me {
+  .ontology {
     width: 100%;
   }
   
@@ -382,7 +382,7 @@ article img[class='left'] {
     width: 50%;
   }
 
-  .rename-me {
+  .ontology {
     width: 100%;
   }
 }
@@ -392,7 +392,7 @@ article img[class='left'] {
     width: 16.66%;
   }
 
-  .rename-me {
+  .ontology {
     width: 33%;
   }
 }
