@@ -13,5 +13,8 @@ The presentation covered the challenges that we've had implementing a dynamic la
 
 If you are looking to get a quick overview of how Redline works internally, this presentation could be an excellent resource.
 
-Hopefully video will be coming soon. I'll update this entry when it is available.
+*Update:*
+
+ESUG just uploaded "video":ttp://www.youtube.com/watch?v=rX8OeNvgFcs&feature=youtu.be&a of the presentation.
+
 

@@ -1,0 +1,12 @@
+---
+title: Smalltalk on the JVM
+summary: James' presentation from ESUG 2011.
+author: Sean T. Allen
+layout: post
+published: true
+---
+<img src="/image/blog/esug-logo-2011.png" alt="ESUG 2011 Logo" title="ESUG 2011 Logo" class="left">
+
+James' ESUG presentation from this August has been posted. Get some popcorn, sit back and "enjoy a magical ride":http://www.youtube.com/watch?v=rX8OeNvgFcs&feature=youtu.be&a through the trial and tribulations of implementating a Smalltalk on the Java Virtual Machine.
+
+Make your movie watching experience even more fun by trying to sync up the video and "the slides":http://www.slideshare.net/esug/smalltalk-on-the-jvm I posted back in September.
