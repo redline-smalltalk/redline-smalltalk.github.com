@@ -44,7 +44,7 @@
 /* SITE */
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery
-  Software: Jekyll, Github Pages, Emacs, Git
+  Software: Jekyll, Github Pages, Emacs, Sublime Text, Textmate, Git
   
 
                                     
