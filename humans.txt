@@ -15,7 +15,7 @@
   Mr: Rob Roland
   Site: http://robertroland.org/
   Twitter: @RobDaemon
-  Location: Long Beach, California
+  Location: Seattle, Washington
 
 /* THANKS */
   To the ever expanding inspiration and support team:
