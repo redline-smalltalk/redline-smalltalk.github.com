@@ -1,0 +1,20 @@
+---
+title: Adopt a Class
+summary: How you can help move Redline forward.
+author: James Ladd
+layout: post
+published: true
+---
+<img src="/image/blog/puppies.jpg" title="Puppies" alt="Puppies" class="left">
+
+Redline Smalltalk requires a runtime of Smalltalk classes that people can work with to build their own Applications. There are quite a few Smalltalk classes in a simple default runtime, a few too many for the small set of core contributors to do on a short time frame, and we need your help to get a Smalltalk runtime done. What we are asking is that you adopt a Smalltalk Class and implement it with tests. The adoption process is very simple, and class class, we at Redline and the Community will love you for it.
+
+To adopt a class you should "check out the Redline Smalltalk source code":https://github.com/redline-smalltalk/redline-smalltalk and add your name to the class you would like to adopt in the file 'OBJECTS-AND-PROTOCOLS' and then commit that change and issue a pull request. When we accept the pull request the class is yours. Any conflicts will be resolved on a first pull-request basis.
+
+The file 'OBJECTS-AND-PROTOCOLS' lists the Smalltalk classes we are implementing for the first version of Redline Smalltalk. These classes are defined in the "Blue Book":http://stephane.ducasse.free.fr/FreeBooks/BlueBook/ (Smalltalk-80 The Language and its Implementation) along with their associated protocols.
+
+A requirements of adopting a class is that you implement a test for each method of the class in anassociated <class>Test.st file. For example, if you adopt Object then you will have an ObjectTests.st file containing tests for each method on Object. 
+
+While the runtime is being implemented we have a very minimal testing framework to assert truths about your methods. See the file Assert.st for the provided methods. This form of testing should be sufficient to get us started and provide some level of confidence things work correctly, while protecting us from possible regression errors. We will have an SUnit or similar framework soon.
+
+It is recommended that you look at the "Getting Started with Redline Smalltalk":http://www.redline.st/discover/getting-started.html post before adopting a class.
