@@ -13,7 +13,8 @@ To adopt a class you should "check out the Redline Smalltalk source code":https:
 
 The file 'OBJECTS-AND-PROTOCOLS' lists the Smalltalk classes we are implementing for the first version of Redline Smalltalk. These classes are defined in the "Blue Book":http://stephane.ducasse.free.fr/FreeBooks/BlueBook/ (Smalltalk-80 The Language and its Implementation) along with their associated protocols.
 
-A requirements of adopting a class is that you implement a test for each method of the class in an associated Test.st file. For example, if you adopt Object then you will have an ObjectTests.st file containing tests for each method on Object. 
+A requirements of adopting a class is that you implement a test for each method of the class in an associated Test.st file. For example, if you adopt Object then you will have an ObjectTests.st file containing tests for each method on Object. Should you find a bug during implementation or testing then please raise an issue in the main github issues list. During implementation you may find you need a new primitive in which case you are free to implement it or you can raise an issue to have it implemented by James or Rob (experts at this now).
+
 
 While the runtime is being implemented we have a very minimal testing framework to assert truths about your methods. See the file Assert.st for the provided methods. This form of testing should be sufficient to get us started and provide some level of confidence things work correctly, while protecting us from possible regression errors. We will have an SUnit or similar framework soon.
 
