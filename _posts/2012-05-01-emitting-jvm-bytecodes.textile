@@ -6,8 +6,6 @@ layout: post
 published: true
 ---
 
-h1. Emitting JVM Bytecodes
-
 h2. Introduction
 
 Redline Smalltalk supports emitting JVM bytecodes in the body of your Smalltalk methods and blocks, simply use the pseudo variable JVM as
