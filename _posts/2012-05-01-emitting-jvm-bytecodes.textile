@@ -39,7 +39,7 @@ The list of messages you can send to the pseudo variable JVM is listed in table 
 
 Table #1 - Bytecode selectors for pseudo variable JVM.
 
-table{border-width:1px}
+table{border:1px}
 | _. Selector                                                                 | _. Description |
 | getStatic: classFqn named: fieldName as: returnDescriptor                | Get from the class 'classFqn' the static field named 'fieldName' as type 'returnDescriptor'. |
 | ldc: literal                                                             | Load a constant onto the stack. |
@@ -50,7 +50,7 @@ table{border-width:1px}
 | new: classFqn                                                            | Create a new instance of the class 'classFqn' and put a reference to it on the stack. |
 | checkcast: classFqn                                                      | Check the reference on the top of the stack is an class that can be cast to a 'classFqn'. |
 | arg: index                                                               | Push the argument at 'index' onto the stack. This isn't a bytecode but a helper we have added. |
-| <opcode>                                                                 | Any bytecode opcode that does not take an argument. See table #3 |
+| &lt;opcode&gt;                                                                 | Any bytecode opcode that does not take an argument. See table #3 |
 
 Table #2 - Identifiers
 
