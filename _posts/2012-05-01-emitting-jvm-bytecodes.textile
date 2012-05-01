@@ -73,6 +73,8 @@ h2. Cheating
 
 Remembering and working with bytecode can be daunting however there is are tools you can use to make this much easier. Under the covers Redline Smalltalk uses the "ASM library":http://asm.ow2.org/ to manipulate bytecodes. Along with this fantastic library is a tool for Eclipse that allows you to view Java source as the set of ASM calls to output the equivelent bytecodes. By writing the code you want in Java and viewing it with ASM you can see the sequence of statements you will need. See picture #1 for an example. Translating from this ASM output to Smalltalk JVM messages is not too difficult.
 
+<img src="/image/blog/asm-screenshot.png" alt="ASM eclipse view">  
+
 h2. Conclusion 
 
 Providing as low a level access to the JVM as possible means you will have the full power of the Machine at your disposal. There should be nothing you want to do in your Smalltalk that the JVM is capable of that you cannot do.
