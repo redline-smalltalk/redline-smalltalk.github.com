@@ -16,13 +16,13 @@ Full interoperability with the Java Virtual Machine (JVM) requires being able to
 
 h2. How 
 
-To enable bytecode manipulation while also keeping a Smalltalk feel in the syntax the pseudo variable JVM was introduced. This pseudo variable can also be thought of as macro because it is evaluated at read time (not at runtime) to allow bytecodes to be emitted into the stream of bytecodes to be executed before execution begins. The pseudo variable JVM is a pseudo variable like *'true'*, *'super'* or *'self'* allowing it to be used as a receiver in message expressions or cascaded message expressions to describe the bytecodes to be emitted. During read time the receiver in a message or cascaded message expression is checked and if it is found to be 'JVM' then a special analyser is used to process the remaining elements of the expression. This analyser will emit bytecodes into the stream according to the expression being analysed. For example: 
+To enable bytecode manipulation while also keeping a Smalltalk feel in the syntax the pseudo variable JVM was introduced. This pseudo variable can also be thought of as macro because it is evaluated at read time (not at runtime) to allow bytecodes to be emitted into the stream of bytecodes to be executed before execution begins. The pseudo variable JVM is a pseudo variable like _'true'_, _'super'_ or _'self'_ allowing it to be used as a receiver in message expressions or cascaded message expressions to describe the bytecodes to be emitted. During read time the receiver in a message or cascaded message expression is checked and if it is found to be 'JVM' then a special analyser is used to process the remaining elements of the expression. This analyser will emit bytecodes into the stream according to the expression being analysed. For example: 
 
 {% highlight smalltalk %}
   JVM invokeVirtual: 'st/redline/PrimObject' method: 'javaValue' matching: '(Ljava/lang/Object;)Lst/redline/PrimObject;'.
 {% endhighlight %}
 
-The above example will emit the bytecode to invoke the virtual method *'javaValue'* with the signature *'(Ljava/lang/Object;)Lst/redline/PrimObject;'* on the object on the top of the stack which is assumed to be of the type *'st/redline/PrimObject'*. The result of executing these bytecodes will be a value on top of the stack. Multiple JVM expressions are typically written as a cascaded message expression, which is just a stylistic choice which I find more clear. For example:
+The above example will emit the bytecode to invoke the virtual method _'javaValue'_ with the signature _'(Ljava/lang/Object;)Lst/redline/PrimObject;'_ on the object on the top of the stack which is assumed to be of the type _'st/redline/PrimObject'_. The result of executing these bytecodes will be a value on top of the stack. Multiple JVM expressions are typically written as a cascaded message expression, which is just a stylistic choice which I find more clear. For example:
 
 {% highlight smalltalk %}
   JVM aload: 1;
