@@ -39,36 +39,39 @@ The list of messages you can send to the pseudo variable JVM is listed in table 
 
 Table #1 - Bytecode selectors for pseudo variable JVM.
 
-table{border:1px}
-|_. Selector                                                                 |_. Description |
-| getStatic: classFqn named: fieldName as: returnDescriptor                | Get from the class 'classFqn' the static field named 'fieldName' as type 'returnDescriptor'. |
-| ldc: literal                                                             | Load a constant onto the stack. |
-| aload: index                                                             | Load the local variable at 'index' onto the stack. |
-| invokeVirtual: classFqn method: methodName matching: parameterDescriptor | Invoke the method 'methodName' of owning class 'classFqn' that matches the signature 'parameterDescriptor'. Note that the method 'methodName' may be overridden in the receiver and the proper instance should be invoked. |
-| invokeSpecial: classFqn method: methodName matching: parameterDescriptor | Invoke the method 'methodName' of owning class 'classFqn' that matches the signature 'parameterDescriptor'. Note that the method 'methodName' must be an initializer, private method in the receiver or its superclasses. |
-| invokeInterface: classFqn method: methodName matching: parameterDescriptor | Invoke the method 'methodName' of owning interface 'classFqn' that matches the signature 'parameterDescriptor'. |
-| new: classFqn                                                            | Create a new instance of the class 'classFqn' and put a reference to it on the stack. |
-| checkcast: classFqn                                                      | Check the reference on the top of the stack is an class that can be cast to a 'classFqn'. |
-| arg: index                                                               | Push the argument at 'index' onto the stack. This isn't a bytecode but a helper we have added. |
-| &lt;opcode&gt;                                                                 | Any bytecode opcode that does not take an argument. See table #3 |
+<table border=1>
+<tr><th>Selector<th>Description
+<tr><td>getStatic: classFqn named: fieldName as: returnDescriptor<td>Get from the class 'classFqn' the static field named 'fieldName' as type 'returnDescriptor'.
+<tr><td>ldc: literal<td>Load a constant onto the stack.
+<tr><td>aload: index<td>Load the local variable at 'index' onto the stack. 
+<tr><td>invokeVirtual: classFqn method: methodName matching: parameterDescriptor<td>Invoke the method 'methodName' of owning class 'classFqn' that matches the signature 'parameterDescriptor'. Note that the method 'methodName' may be overridden in the receiver and the proper instance should be invoked. 
+<tr><td>invokeSpecial: classFqn method: methodName matching: parameterDescriptor<td>Invoke the method 'methodName' of owning class 'classFqn' that matches the signature 'parameterDescriptor'. Note that the method 'methodName' must be an initializer, private method in the receiver or its superclasses.
+<tr><td>invokeInterface: classFqn method: methodName matching: parameterDescriptor<td>Invoke the method 'methodName' of owning interface 'classFqn' that matches the signature 'parameterDescriptor'.
+<tr><td>new: classFqn<td>Create a new instance of the class 'classFqn' and put a reference to it on the stack. 
+<tr><td>checkcast: classFqn<td>Check the reference on the top of the stack is an class that can be cast to a 'classFqn'.
+<tr><td>arg: index<td>Push the argument at 'index' onto the stack. This isn't a bytecode but a helper we have added.
+<tr><td>&lt;opcode&gt;<td>Any bytecode opcode that does not take an argument. See table #3
+</table>
 
 Table #2 - Identifiers
 
-|_. Identifier          |_. Description |
-| classFqn            | A class fully qualified name, which is java is a package name with all '.' replaced with '/'. For example: st.redline.PrimObject has a classFqn of st/redline/PrimObject. |
-| fieldName           | The name of the field within the Class. No special decoration or formatting. |
-| methodName          | The name of the method within the Class. No special decoration or formatting. |
-| returnDescriptor    | The type of the return value or argument. This is typically in the form L<classFqn>;, For more information see Method Descriptors http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#7035 |
-| parameterDescriptor | The types of the arguments passed to a method. For more information see Method Descriptors http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#7035 |
-| literal             | A literal is a non null Integer, a Float, a Long, a Double a String. |
+<table border=1>
+<tr><th>Identifier<th>Description
+<tr><td>classFqn<td>A class fully qualified name, which is java is a package name with all '.' replaced with '/'. For example: st.redline.PrimObject has a classFqn of st/redline/PrimObject.
+<tr><td>fieldName<td>The name of the field within the Class. No special decoration or formatting.
+<tr><td>methodName<td>The name of the method within the Class. No special decoration or formatting.
+<tr><td>returnDescriptor<td>The type of the return value or argument. This is typically in the form L<classFqn>;, For more information see Method Descriptors http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#7035
+<tr><td>parameterDescriptor<td>The types of the arguments passed to a method. For more information see Method Descriptors http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#7035 
+<tr><td>literal<td>A literal is a non null Integer, a Float, a Long, a Double a String.
+</table>
 
 Table #3 - Opcodes that don't take an argument.
 
-| NOP, ACONST_NULL, ICONST_M1, ICONST_0, ICONST_1, ICONST_2, ICONST_3, ICONST_4, ICONST_5, LCONST_0, LCONST_1, FCONST_0, FCONST_1, FCONST_2, DCONST_0, DCONST_1, IALOAD, LALOAD, FALOAD, DALOAD, AALOAD, BALOAD, CALOAD, SALOAD, IASTORE, LASTORE, FASTORE, DASTORE, AASTORE, BASTORE, CASTORE, SASTORE, POP, POP2, DUP, DUP_X1, DUP_X2, DUP2, DUP2_X1, DUP2_X2, SWAP, IADD, LADD, FADD, DADD, ISUB, LSUB, FSUB, DSUB, IMUL, LMUL, FMUL, DMUL, IDIV, LDIV, FDIV, DDIV, IREM, LREM, FREM, DREM, INEG, LNEG, FNEG, DNEG, ISHL, LSHL, ISHR, LSHR, IUSHR, LUSHR, IAND, LAND, IOR, LOR, IXOR, LXOR, I2L, I2F, I2D, L2I, L2F, L2D, F2I, F2L, F2D, D2I, D2L, D2F, I2B, I2C, I2S, LCMP, FCMPL, FCMPG, DCMPL, DCMPG, IRETURN, LRETURN, FRETURN, DRETURN, ARETURN, RETURN, ARRAYLENGTH, ATHROW, MONITORENTER, or MONITOREXIT. |
+NOP, ACONST_NULL, ICONST_M1, ICONST_0, ICONST_1, ICONST_2, ICONST_3, ICONST_4, ICONST_5, LCONST_0, LCONST_1, FCONST_0, FCONST_1, FCONST_2, DCONST_0, DCONST_1, IALOAD, LALOAD, FALOAD, DALOAD, AALOAD, BALOAD, CALOAD, SALOAD, IASTORE, LASTORE, FASTORE, DASTORE, AASTORE, BASTORE, CASTORE, SASTORE, POP, POP2, DUP, DUP_X1, DUP_X2, DUP2, DUP2_X1, DUP2_X2, SWAP, IADD, LADD, FADD, DADD, ISUB, LSUB, FSUB, DSUB, IMUL, LMUL, FMUL, DMUL, IDIV, LDIV, FDIV, DDIV, IREM, LREM, FREM, DREM, INEG, LNEG, FNEG, DNEG, ISHL, LSHL, ISHR, LSHR, IUSHR, LUSHR, IAND, LAND, IOR, LOR, IXOR, LXOR, I2L, I2F, I2D, L2I, L2F, L2D, F2I, F2L, F2D, D2I, D2L, D2F, I2B, I2C, I2S, LCMP, FCMPL, FCMPG, DCMPL, DCMPG, IRETURN, LRETURN, FRETURN, DRETURN, ARETURN, RETURN, ARRAYLENGTH, ATHROW, MONITORENTER, or MONITOREXIT.
 
 h2. Cheating
 
-Remembering and working with bytecode can be daunting however there is are tools you can use to make this much easier. Under the covers Redline Smalltalk uses the ASM library (http://asm.ow2.org/) to manipulate bytecodes. Along with this fantastic library is a tool for Eclipse that allows you to view Java source as the set of ASM calls to output the equivelent bytecodes. By writing the code you want in Java and viewing it with ASM you can see the sequence of statements you will need. See picture #1 for an example. Translating from this ASM output to Smalltalk JVM messages is not too difficult.
+Remembering and working with bytecode can be daunting however there is are tools you can use to make this much easier. Under the covers Redline Smalltalk uses the "ASM library":http://asm.ow2.org/ to manipulate bytecodes. Along with this fantastic library is a tool for Eclipse that allows you to view Java source as the set of ASM calls to output the equivelent bytecodes. By writing the code you want in Java and viewing it with ASM you can see the sequence of statements you will need. See picture #1 for an example. Translating from this ASM output to Smalltalk JVM messages is not too difficult.
 
 h2. Conclusion 
 
