@@ -39,7 +39,8 @@ The list of messages you can send to the pseudo variable JVM is listed in table 
 
 Table #1 - Bytecode selectors for pseudo variable JVM.
 
-| Selector                                                                 | Description |
+table{border-width:1px}
+| _. Selector                                                                 | _. Description |
 | getStatic: classFqn named: fieldName as: returnDescriptor                | Get from the class 'classFqn' the static field named 'fieldName' as type 'returnDescriptor'. |
 | ldc: literal                                                             | Load a constant onto the stack. |
 | aload: index                                                             | Load the local variable at 'index' onto the stack. |
@@ -53,7 +54,7 @@ Table #1 - Bytecode selectors for pseudo variable JVM.
 
 Table #2 - Identifiers
 
-| Identifier          | Description |
+| _. Identifier          | _. Description |
 | classFqn            | A class fully qualified name, which is java is a package name with all '.' replaced with '/'. For example: st.redline.PrimObject has a classFqn of st/redline/PrimObject. |
 | fieldName           | The name of the field within the Class. No special decoration or formatting. |
 | methodName          | The name of the method within the Class. No special decoration or formatting. |
