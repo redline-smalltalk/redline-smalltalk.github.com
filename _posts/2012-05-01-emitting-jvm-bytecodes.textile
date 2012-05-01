@@ -1,0 +1,100 @@
+---
+title: Emitting JVM Bytecodes
+summary: How to get full interoperability with the JVM.
+author: James Ladd
+layout: post
+published: true
+---
+
+h1. Emitting JVM Bytecodes
+
+h2. Introduction
+
+Redline Smalltalk supports emitting JVM bytecodes in the body of your Smalltalk methods and blocks, simply use the pseudo variable JVM as
+the receiver and send it messages. This post will hopefully provide enough detail for you to use the bytecode facilities
+of Redline Smalltalk in your own classes, enabling you to call upon any feature of the Java Virtual Machine at the lowest possible level.
+
+h2. Why
+
+Full interoperability with the Java Virtual Machine (JVM) requires being able to talk to it at the lowest possible level, and that level is 
+JVM bytecode which is executed by the JVM. At this level all the functionality of the machine is available to you, including the ability to
+integrate with any classes running in the JVM regardless of the language they were created in. Redline Smalltalk requires the ability to
+load any class, call any method of a class, access any field of a class, manipulate the JVM stack and to query methods arguments and get and
+set local variables.
+
+h2. How 
+
+To enable bytecode manipulation while also keeping a Smalltalk feel in the syntax the pseudo variable JVM was introduced. This pseudo variable
+can also be thought of as macro because it is evaluated at read time (not at runtime) to allow bytecodes to be emitted into the stream of bytecodes to
+be executed before execution begins. The pseudo variable JVM is a pseudo variable like 'true', 'super' or 'self' allowing it to be used as a 
+receiver in message expressions or cascaded message expressions to describe the bytecodes to be emitted.
+During read time the receiver in a message or cascaded message expression is checked and if it is found to be 'JVM' then a special analyser is
+used to process the remaining elements of the expression. This analyser will emit bytecodes into the stream according to the expression being analysed.
+For example: 
+
+{% highlight smalltalk %}
+  JVM invokeVirtual: 'st/redline/PrimObject' method: 'javaValue' matching: '(Ljava/lang/Object;)Lst/redline/PrimObject;'.
+{% endhighlight %}
+
+The above example will emit the bytecode to invoke the virtual method 'javaValue' with the signature '(Ljava/lang/Object;)Lst/redline/PrimObject;' on
+the object on the top of the stack which is assumed to be of the type 'st/redline/PrimObject'. The result of executing these bytecodes will be a 
+value on top of the stack. Multiple JVM expressions are typically written as a cascaded message expression, which is just a stylistic choice which I
+find more clear. For example:
+{% highlight smalltalk %}
+  JVM aload: 1;
+      invokeVirtual: 'st/redline/PrimObject' method: 'javaValue' matching: '()Ljava/lang/Object;';
+      checkcast: 'st/redline/stout/RouterRegistry';
+      aload: 1.
+{% endhighlight %}
+
+Note that while you are emitting bytecode Redline still decorates these with source file names and line numbers so you can step through the bytecode
+with a debugger.
+
+h2. Usage
+
+The list of messages you can send to the pseudo variable JVM is listed in table #1 with the detail of the arguments listed in table #2. However this is
+subject to change as this is documentation and code and documentation are not always in sync. When in doubt check the source file JVMAnalyser.java in 
+the Redline Smalltalk distribution.
+
+Table #1 - Bytecode selectors for pseudo variable JVM.
+
+| Selector                                                                 | Description |
+| getStatic: classFqn named: fieldName as: returnDescriptor                | Get from the class 'classFqn' the static field named 'fieldName' as type 'returnDescriptor'. |
+| ldc: literal                                                             | Load a constant onto the stack. |
+| aload: index                                                             | Load the local variable at 'index' onto the stack. |
+| invokeVirtual: classFqn method: methodName matching: parameterDescriptor | Invoke the method 'methodName' of owning class 'classFqn' that matches the signature 'parameterDescriptor'. Note that the method 'methodName' may be overridden in the receiver and the proper instance should be invoked. |
+| invokeSpecial: classFqn method: methodName matching: parameterDescriptor | Invoke the method 'methodName' of owning class 'classFqn' that matches the signature 'parameterDescriptor'. Note that the method 'methodName' must be an initializer, private method in the receiver or its superclasses. |
+| invokeInterface: classFqn method: methodName matching: parameterDescriptor | Invoke the method 'methodName' of owning interface 'classFqn' that matches the signature 'parameterDescriptor'. |
+| new: classFqn                                                            | Create a new instance of the class 'classFqn' and put a reference to it on the stack. |
+| checkcast: classFqn                                                      | Check the reference on the top of the stack is an class that can be cast to a 'classFqn'. |
+| arg: index                                                               | Push the argument at 'index' onto the stack. This isn't a bytecode but a helper we have added. |
+| <opcode>                                                                 | Any bytecode opcode that does not take an argument. See table #3 |
+
+
+Table #2 - Identifiers
+
+| Identifier          | Description |
+| classFqn            | A class fully qualified name, which is java is a package name with all '.' replaced with '/'. For example: st.redline.PrimObject has a classFqn of st/redline/PrimObject. |
+| fieldName           | The name of the field within the Class. No special decoration or formatting. |
+| methodName          | The name of the method within the Class. No special decoration or formatting. |
+| returnDescriptor    | The type of the return value or argument. This is typically in the form L<classFqn>;, For more information see Method Descriptors http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#7035 |
+| parameterDescriptor | The types of the arguments passed to a method. For more information see Method Descriptors http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#7035 |
+| literal             | A literal is a non null Integer, a Float, a Long, a Double a String. |
+||
+
+Table #3 - Opcodes that don't take an argument.
+
+| NOP, ACONST_NULL, ICONST_M1, ICONST_0, ICONST_1, ICONST_2, ICONST_3, ICONST_4, ICONST_5, LCONST_0, LCONST_1, FCONST_0, FCONST_1, FCONST_2, DCONST_0, DCONST_1, IALOAD, LALOAD, FALOAD, DALOAD, AALOAD, BALOAD, CALOAD, SALOAD, IASTORE, LASTORE, FASTORE, DASTORE, AASTORE, BASTORE, CASTORE, SASTORE, POP, POP2, DUP, DUP_X1, DUP_X2, DUP2, DUP2_X1, DUP2_X2, SWAP, IADD, LADD, FADD, DADD, ISUB, LSUB, FSUB, DSUB, IMUL, LMUL, FMUL, DMUL, IDIV, LDIV, FDIV, DDIV, IREM, LREM, FREM, DREM, INEG, LNEG, FNEG, DNEG, ISHL, LSHL, ISHR, LSHR, IUSHR, LUSHR, IAND, LAND, IOR, LOR, IXOR, LXOR, I2L, I2F, I2D, L2I, L2F, L2D, F2I, F2L, F2D, D2I, D2L, D2F, I2B, I2C, I2S, LCMP, FCMPL, FCMPG, DCMPL, DCMPG, IRETURN, LRETURN, FRETURN, DRETURN, ARETURN, RETURN, ARRAYLENGTH, ATHROW, MONITORENTER, or MONITOREXIT. |
+
+h2. Cheating
+
+Remembering and working with bytecode can be daunting however there is are tools you can use to make this much easier. Under the covers Redline Smalltalk uses
+the ASM library (http://asm.ow2.org/) to manipulate bytecodes. Along with this fantastic library is a tool for Eclipse that allows you to view Java source as the
+set of ASM calls to output the equivelent bytecodes. By writing the code you want in Java and viewing it with ASM you can see the sequence of statements you will need.
+See picture #1 for an example. Translating from this ASM output to Smalltalk JVM messages is not too difficult.
+
+h2. Conclusion 
+
+Providing as low a level access to the JVM as possible means you will have the full power of the Machine at your disposal. There should be nothing you want to do in
+your Smalltalk that the JVM is capable of that you cannot do.
+
