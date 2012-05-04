@@ -6,6 +6,8 @@ layout: post
 published: true
 ---
 
+<img src="/image/blog/honeycomb.jpg" alt="Bee on a honeycomb" class="left">
+
 h2. Introduction
 
 Redline Smalltalk supports emitting JVM bytecodes in the body of your Smalltalk methods and blocks, simply use the pseudo variable JVM as the receiver and send it messages. This post will hopefully provide enough detail for you to use the bytecode facilities of Redline Smalltalk in your own classes, enabling you to call upon any feature of the Java Virtual Machine at the lowest possible level.
