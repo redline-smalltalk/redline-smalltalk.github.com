@@ -217,6 +217,11 @@ aside {
   font-style: italic;
 }
 
+dl {
+  margin: 1em 0;
+  padding: 0 0 0 40px; 
+}
+
 body {
   margin-top: 15px;
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
@@ -311,6 +316,12 @@ article img[class='left'] {
 
 .ontology li {
   list-style: none;
+}
+
+/* contribute */
+
+#contribute li {
+  list-style-type: none;
 }
 
 /* =============================================================================
