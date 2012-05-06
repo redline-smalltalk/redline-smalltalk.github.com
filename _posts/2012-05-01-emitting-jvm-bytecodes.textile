@@ -62,7 +62,7 @@ Table #2 - Identifiers
 <tr><td>classFqn<td>A class fully qualified name, which is java is a package name with all '.' replaced with '/'. For example: st.redline.PrimObject has a classFqn of st/redline/PrimObject.
 <tr><td>fieldName<td>The name of the field within the Class. No special decoration or formatting.
 <tr><td>methodName<td>The name of the method within the Class. No special decoration or formatting.
-<tr><td>returnDescriptor<td>The type of the return value or argument. This is typically in the form L<classFqn>;, For more information see Method Descriptors http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#7035
+<tr><td>returnDescriptor<td>The type of the return value or argument. This is typically in the form L&lt;classFqn&gt;, For more information see Method Descriptors http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#7035
 <tr><td>parameterDescriptor<td>The types of the arguments passed to a method. For more information see Method Descriptors http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#7035 
 <tr><td>literal<td>A literal is a non null Integer, a Float, a Long, a Double a String.
 </table>
