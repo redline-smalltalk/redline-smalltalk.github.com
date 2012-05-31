@@ -39,7 +39,6 @@
     Guy Steele
     Slava Ustovitskiy
     Fionna Yao
-    Rob Roland
     Stefan Krecher
 
 /* SITE */
