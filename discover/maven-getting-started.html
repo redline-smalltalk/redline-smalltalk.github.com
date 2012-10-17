@@ -1,0 +1,44 @@
+---
+title: Maven and Redline Smalltalk
+description: Instructions for including Redline Smalltalk via Maven
+layout: default
+---
+<article>
+<section>
+<header><h1>Maven and Redline Smalltalk</h1></header>
+
+<aside>
+Currently, we only have a Redline Smalltalk snapshot meaning you need to specify the Sonatype snapshot repository in your <repositories> section:
+{% highlight bash %}
+<repositories>
+  <repository>
+    <id>snapshots-repo</id>
+    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    <releases><enabled>false</enabled></releases>
+    <snapshots><enabled>true</enabled></snapshots>
+  </repository>
+</repositories>
+{% endhighlight %}
+</aside>
+
+<header><h1>Maven Dependency</h1></header>
+
+<p>
+Add the following stanza to your <dependencies> to include Redline Smalltalk in your projects.
+
+{% highlight bash %}
+<dependency>
+  <groupId>st.redline</groupId>
+  <artifactId>redline</artifactId>
+  <version>0.3-SNAPSHOT</version>
+</dependency>
+{% endhighlight %}
+</p>
+
+<p>
+You are now ready to work with Redline.
+</p>
+</section>
+</article>
+
+
