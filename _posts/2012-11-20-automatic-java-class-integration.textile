@@ -1,0 +1,114 @@
+---
+title: Automatic Java Class Integration
+summary: A look inside Redline's Java adaptor functionallity
+author: James Ladd
+layout: post
+published: true
+---
+h2. Introduction
+
+Integrating with Java at the lowest level of bytecode "is already supported":/blog/2012/05/01/emitting-jvm-bytecodes.html by Redline Smalltalk. What remains in Redlines goal of Java integration is the ability to automatically adapt to a Java class to enable using it within your Smalltalk applications. We want this integration as there are Java libraries for almost every activity and it will take a while before more idiomatic Smalltalk equivalents are ready. Recently this automatic Java class integration was added to the Redline Smalltalk runtime and this post is about that support, how to use it and what it does and doesn't do. We hope that with this support more people will give Redline a try as the barrier to getting things done has been significantly reduced.
+
+h2. Importing Functionality
+
+Redline Smalltalk already supports namespaces in Smalltalk via  the 'import:' keyword selector. You use it to bring Smalltalk
+classes from one namespace into another (called packages in Java). A namespace is automatically created for class when it is  loaded. The namespace is derived from the path to the class' source. For example: given a file src/smalltalk/com/domain/MyClass.st that defines the Smalltalk class MyClass the automatic package will be 'com.domain'. To import this class for use by another class you would use the 'import:' keyword with the package name as a string argument. For example: import: 'com.domain.MyClass'. You can import a single class by specifying the full namespace of the class as in the example above, or you can import all the classes within a namespace by using the * wildcard character. For example: import: 'com.domain.*'. Multiple imports can be specified in the one import statement by separating the namespaces by a space ' '. For example: import: 'com.domain.MyClass com.anotherDomain.OtherClass'. Java classes that are imported by your project must be found on the classpath of your Project, as .class files or in a JAR. See the documentation and command line options for 'stic' to see how to add to the classpath.
+
+Sometimes when you import a class its name can clash with the name of another class requiring you to make up a new name for your class. This is painful as you should be able to call your classes whatever you need to add meaning and readability to your 
+project. To circumvent this problem Redline Smalltalk allows you to alias an imported class so you can use this alias within your
+code. To alias an imported class you use the 'import:as:' keyword selector. For example: import: 'com.domain.String' as: 'ExternalString'. With this import and alias references to 'ExternalString' will refer to the class com.domain.String. You can't use wildcards with the 'import:as:' keyword selector.
+
+h2. Importing Java Classes
+
+The automatic adapting of a Java class is an extension to the 'import:as:' functionality. When a class is imported the Redline runtime will check to see if the class is a Java class and if it is, it will automatically wrap it in a new Smalltalk class that provides access to its functionality. The 'import:as:' selector is used because it is expected that an imported Java class will be a component of a Smalltalk class rather than used directly. To import the Java runtime class 'java.lang.String' you would use the following: import: 'java.lang.String' as: 'JavaString'. It is suggested to Redliners that while importing a Java class is now easy we can and should provide a more idiomatic Smalltalk equivalent. To know what we mean compare the Smalltalk collection classes with those in the Java runtime, Smalltalk typically provides a more eloquent implementation.
+
+h2. Adaptor Mechanics
+
+When a Java class is imported, the Redline Smalltalk generates a Smalltalk class that uses the Redline JVM bytecode support to integrate with the Java class. First the Java class is analyzed using reflection, then Smalltalk source is generated in memory and then compiled and added to the list of classes loaded by the Redline classloader. What follows is a detailed description of this process and how the types of arguments and the names of methods are handled.
+
+Imagine we have the following Java class:
+
+{% highlight java%}
+package com.friendly;
+public class Greeting {
+    private final String defaultGreeting;
+    public Greeting(String defaultGreeting) {
+        this.defaultGreeting = defaultGreeting;
+    }
+    public Greeting() {
+        this("G'Day Mate.");
+    }
+    public void say() {
+        say(defaultGreeting);
+    }
+    public void say(String greeting) {
+        System.out.println(greeting);
+    }
+    public String getDefaultGreeting() {
+        return defaultGreeting;
+    }
+}
+{% endhighlight %}
+
+When this class is imported using the statement import: 'com.friendly.Greeting' as: 'Greeter' (see ShowGreetingAdaptor.st) the following Smalltalk code is generated in memory, note some methods from java.lang.Object and some of the method bodies have been removed:
+
+{%highlight smalltalk%}
+"@: smalltalkClassesThatAdaptJavaClasses.com.friendly.GreetingAdaptor"
+Object < #GreetingAdaptor.
+
+GreetingAdaptor class atSelector: #new put: [ | obj |
+  JVM new: 'com/friendly/Greeting'.
+  JVM dup.
+  JVM invokeSpecial: 'com/friendly/Greeting' method: '<init>' matching: '()V'.
+  JVM invokeStatic: 'st/redline/compiler/SGOAOJC' method:'smalltalkObjectForJavaValue' matching: '(Ljava/lang/Object;)Lst/redline/core/PrimObject;'.
+  JVM putTemp: 0.
+  ^ obj.
+].
+
+GreetingAdaptor class atSelector: #with: put: [ :args || selector javaClassName|
+  javaClassName := 'com.friendly.Greeting'.
+  JVM atTemp: 1.
+  JVM invokeStatic: 'st/redline/compiler/SGOAOJC' method: 'javaObjectForSmalltalkObject' matching: '(Lst/redline/core/PrimObject;)Ljava/lang/Object;'.
+  JVM checkcast: 'java/lang/String'.
+  JVM arg: 0.
+  JVM invokeStatic: 'st/redline/compiler/SGOAOJC' method: 'javaObjectForSmalltalkObject' matching: '(Lst/redline/core/PrimObject;)Ljava/lang/Object;'.
+  JVM invokeStatic: 'st/redline/compiler/SGOAOJC' method: 'convertToArrayOfObjects' matching: '(Ljava/lang/Object;)[Ljava/lang/Object;'.
+  JVM checkcast: '[Ljava/lang/Object;'.
+  JVM invokeStatic: 'st/redline/compiler/SGOAOJC' method: 'smalltalkSelectorForMethodThatWrapsRightJavaConstructorForClassNamed' matching: '(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;'.
+  JVM invokeStatic: 'st/redline/compiler/SGOAOJC' method: 'smalltalkObjectForJavaValue' matching: '(Ljava/lang/Object;)Lst/redline/core/PrimObject;'.
+  JVM putTemp: 0.
+  JVM aload: 1.
+  JVM arg: 0.
+  JVM atTemp: 0.
+  JVM invokeVirtual: 'st/redline/core/PrimObject' method: 'perform' matching: '(Lst/redline/core/PrimObject;Lst/redline/core/PrimObject;)Lst/redline/core/PrimObject;'.  
+].
+
+GreetingAdaptor class atSelector: #withString: put: [ :args || obj |
+].
+
+GreetingAdaptor atSelector: #say put: [ | rtn |
+].
+
+GreetingAdaptor atSelector: #sayString: put: [ :args || rtn |
+].
+
+GreetingAdaptor atSelector: #say: put: [ :args || selector methodName|
+].
+
+GreetingAdaptor initialize.
+{%endhighlight%}
+
+You will notice that the generated code makes heavy use of the Redline JVM bytecode DSL. You can use this DSL directly in your code as well or use the adaptor. The preferred Redline approach to integrating Java is to use the JVM DSL or the adaptor - then to provide more idiomatic Smalltalk methods to abstract calling code from relying on the exposed Java methods directly which don't look particularly Smalltalkish. 
+
+The file ShowGreetingAdaptor.st in the Redline distribution shows the adaptor in action. The example looks like this:
+
+{% highlight smalltalk %}
+import: 'com.friendly.Greeting' as: 'Greeter'.
+Greeter new say.
+{% endhighlight %}
+
+The output of the above script is "G'Day Mate." printed on the console by the Java Class com.friendly.Greeting. Not an impressive piece of Java by any means but adapting to it at runtime and being able to treat it just like a Smalltalk class is. At least we at Redline think so.
+
+We hope you enjoy this new functionality and that it helps you get started with Redline Smalltalk.
+
+*end*
