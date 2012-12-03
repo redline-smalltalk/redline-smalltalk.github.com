@@ -5,7 +5,7 @@ layout: default
 ---
 <article>
 <section>
-<header><h1>Maven and Redline Smalltalk</h1></header>
+<header><h1>Existing Maven Project</h1></header>
 
 <aside>
 Currently, we only have a Redline Smalltalk snapshot meaning you need to specify the Sonatype snapshot repository in your repositories section:
@@ -39,6 +39,76 @@ Add the following stanza to your dependencies section to include Redline Smallta
 <p>
 You are now ready to work with Redline.
 </p>
+</section>
+<section>
+<header><h1>New Maven Project</h1></header>
+These instructions create a new project that will use Redline Smalltalk.
+<p>
+Create your project using the mvn archetype generate command:
+</p>
+{% highlight bash %}
+mvn archetype:generate
+{% endhighlight %}
+This is standard Maven and you can find more details on the archetype generation <a href="http://maven.apache.org/archetype/maven-archetype-plugin/usage.html">here</a>.
+Once you have your pom.xml generated you need to add the Repository and Dependency stanzas defined at the top of this page. Try building your project to make sure everything is ok.
+{% highlight bash %}
+mvn clean test
+{% endhighlight %}
+</p>
+<p>
+Maven projects typically have the following structure:
+{% highlight bash %}
+$ tree project
+project
+|-- pom.xml
+`-- src
+    |-- main
+    |   `-- java
+    |       `-- com
+    |           `-- company
+    |               `-- project
+    |                   `-- App.java
+    `-- test
+        `-- java
+            `-- com
+                `-- company
+                    `-- project
+                        `-- AppTest.java
+
+11 directories, 3 files
+{% endhighlight %}
+To fit in with this and not fight the tooling we suggest adding smalltalk subtrees, like this:
+{% highlight bash %}
+$ tree project
+project
+|-- pom.xml
+`-- src
+    |-- main
+    |   `-- java
+    |   |   `-- com
+    |   |       `-- company
+    |   |           `-- project
+    |   |               `-- App.java
+    |   `-- smalltalk
+    |       `-- com
+    |           `-- company
+    |               `-- project
+    |                   `-- MyClass.st
+    `-- test
+    |   `-- java
+    |   |   `-- com
+    |   |       `-- company
+    |   |           `-- project
+    |   |               `-- AppTest.java
+    |   `-- smalltalk
+            `-- com
+                `-- company
+                    `-- project
+                        `-- MyClassTest.st
+
+{% endhighlight %}
+</p>
+*** MORE TO COME ***
 </section>
 </article>
 
