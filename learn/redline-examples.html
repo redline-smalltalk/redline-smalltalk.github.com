@@ -44,14 +44,25 @@ Object subclass: #Customer
 
   <section>
     <header><h3>Packages</h3></header>
-    <p>Redline Smalltalk provides a namespace mechanism known as 'packages'. The implementation of which closley follows 
+    <p>Redline Smalltalk provides a namespace mechanism known as 'packages'. The implementation of packages in Redline closley follows 
     how packages are defined and used in Java. For more information on Java packages see <a href="http://docs.oracle.com/javase/tutorial/java/package/packages.html">this Lesson</a>.</p>
     <p>
-    To use a class that is a different package you need to import it. For example, lets assume the class Customer wants to reference
+    To use a class that is in a different package you need to import it. For example, lets assume the class Customer wants to reference
     the class Address and the class Address is in the package 'traits':
 {% highlight bash %}
 self import: 'traits.Address'.
 {% endhighlight %}
+    </p>
+    <p>
+    Import statements are typically the first statements in a file. You can have multiple 'import' statements, and you can use wildcards
+    as well.
+{% highlight bash %}
+self import: 'traits.Address';
+     import: 'parts.*'.
+{% endhighlight %}
+    </p>
+    <p>
+    You do not need to import classes you reference that are in the same package as this is done for you by Redline Smalltalk.
     </p>
   </section>
 
