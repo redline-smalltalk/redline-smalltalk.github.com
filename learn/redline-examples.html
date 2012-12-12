@@ -12,7 +12,7 @@ layout: default
   <section>
     <header><h3>Creating a Class</h3></header>
     <p>
-    To create a class in Redline Smalltalk use your favourite editor to create a file to hold the definition of the class. By convention there is a single class defined in a single file and the file is named the same as the class with a '.st' file extension. For example, the class Customer would be defined in the file Customer.st. It is convention to start the name of a class with a capital letter and therefore the filename as well.
+    To create a class in Redline Smalltalk use your favourite editor to create a file to hold the class definition. Convention is a single class defined in a single file with the file named the same as the class with a '.st' file extension. For example, the class Customer would be defined in the file Customer.st. It is convention to start the name of a class with a capital letter and therefore the filename as well.
     </p>
     <p>
     Below is an example of defining the Customer class using Redline Smalltalk:
@@ -20,6 +20,19 @@ layout: default
 {% highlight bash %}
 Object < #Customer.
 {% endhighlight %}
+
+    In the snippet above the Class Object is being sent the message '<' with the argument #Customer. The '<' message in Redline is shorthand for the more traditional subclass message selector 'subclass:instanceVariableNames:classVariableNames:poolDictionaries:category:'. You can use the longer form if you wish. For example, the following is equivalent to the above class creation statement:
+
+{% highlight bash %}
+Object subclass: #Customer
+       instanceVariableNames: ''
+       classVariableNames: ''
+       poolDictionaries: ''
+       category: ''.
+{% endhighlight %}
+
+    In fact the '<' subclass creation message selector just sends the longer version.
+    The Smalltalk class Class in the file Class.st defines the these subclass creation messages.
     </p>
   </section>
 
