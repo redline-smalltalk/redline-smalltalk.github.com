@@ -21,7 +21,7 @@ layout: default
     <p>
     Below is an example of defining the class Customer using Redline Smalltalk:
 
-{% highlight bash %}
+{% highlight smalltalk %}
 Object < #Customer.
 {% endhighlight %}
 
@@ -29,7 +29,7 @@ Object < #Customer.
     The '<' message in Redline is shorthand for the more traditional subclass message 'subclass:instanceVariableNames:classVariableNames:poolDictionaries:category:'.
     You can use the longer form if you wish. The following is equivalent to the statement above:</p>
 
-{% highlight bash %}
+{% highlight smalltalk %}
 Object subclass: #Customer
        instanceVariableNames: ''
        classVariableNames: ''
@@ -54,14 +54,14 @@ Object subclass: #Customer
     <p>
     To use a class that is in a different package you need to import it. For example, lets assume the class Customer wants to reference
     the class Address and the class Address is in the package 'traits':
-{% highlight bash %}
+{% highlight smalltalk %}
 self import: 'traits.Address'.
 {% endhighlight %}
     </p>
     <p>
     Import statements are typically the first statements in a file. You can have multiple 'import' statements, and you can use wildcards
     as well.
-{% highlight bash %}
+{% highlight smalltalk %}
 self import: 'traits.Address';
      import: 'parts.*'.
 {% endhighlight %}
