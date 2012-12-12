@@ -82,6 +82,18 @@ self import: 'traits.Address';
     <p>
     Convention is to import each of the classes you reference rather than use the wildcard.
     </p>
+    <p>
+    There may come a time when you want to import a class whose name clashes with your class name. In this situation you
+    can use a variation of the 'import:' message 'import:as:'. With this message you can import a class as defined above 
+    but provide a local alias with which you can refer to it.
+    </p>
+{% highlight smalltalk %}
+self import: 'external.Customer' as: 'ExternalCustomer'.
+ExternalCustomer < #Customer ....
+{% endhighlight %}
+    <p>
+    It does not make sense to use wildcards with the 'import:as:' message.
+    </p>
   </section>
 
 </article>
