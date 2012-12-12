@@ -6,9 +6,20 @@ layout: default
 <article>
   <section>
     <header><h1>Redline Smalltalk Examples</h1></header>
+    <p>This is a collection of examples and snippets of Redline Smalltalk code. We hope it helps you get things done.</p>
+  </section>
 
+  <section>
+    <header><h3>Creating a Class</h3></header>
     <p>
-      This is a collection of examples and snippets of Redline Smalltalk code. We hope it helps you get things done.
+    To create a class in Redline Smalltalk use your favourite editor to create a file to hold the definition of the class. By convention there is a single class defined in a single file and the file is named the same as the class with a '.st' file extension. For example, the class Customer would be defined in the file Customer.st. It is convention to start the name of a class with a capital letter and therefore the filename as well.
+    </p>
+    <p>
+    Below is an example of defining the Customer class using Redline Smalltalk:
+
+{% highlight bash %}
+Object < #Customer.
+{% endhighlight %}
     </p>
   </section>
 
