@@ -49,7 +49,12 @@ Object subclass: #Customer
     <p>
     The key difference between Redline Smalltalk packages and Java packages is that the location of a file in the directory tree
     defines the package in Redline Smalltalk while the 'package' statement defines the package in Java. We prefer the directory tree convention 
-    over more typing.
+    over more typing. For example:
+{% highlight bash %}
+src/main/smalltalk/com/mydomain/Foo.st
+{% endhighlight %}
+    The class Foo above is in the package 'com.mydomain'. The Redline compiler lets you define from where the directory tree
+    that represents packages is to start. In this case src/main/smalltalk.
     </p>
     <p>
     To use a class that is in a different package you need to import it. For example, lets assume the class Customer wants to reference
