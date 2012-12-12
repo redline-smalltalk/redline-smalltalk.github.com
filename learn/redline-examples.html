@@ -21,8 +21,8 @@ layout: default
 Object < #Customer.
 {% endhighlight %}
 
-    In the snippet above the Class Object is being sent the message '<' with the argument #Customer. The '<' message in Redline is shorthand for the more traditional subclass message selector 'subclass:instanceVariableNames:classVariableNames:poolDictionaries:category:'. You can use the longer form if you wish. For example, the following is equivalent to the above class creation statement:
-
+    In the snippet above the class Object is being sent the message '<' with the argument #Customer. The '<' message in Redline is shorthand for the more traditional subclass message 'subclass:instanceVariableNames:classVariableNames:poolDictionaries:category:'. You can use the longer form if you wish. For example, the following is equivalent to the statement above:
+<br>
 {% highlight bash %}
 Object subclass: #Customer
        instanceVariableNames: ''
@@ -31,8 +31,8 @@ Object subclass: #Customer
        category: ''.
 {% endhighlight %}
 
-    In fact the '<' subclass creation message selector just sends the longer version.
-    The Smalltalk class Class in the file Class.st defines the these subclass creation messages.
+    In fact the '<' subclass creation message simply sends the longer version.
+    The Smalltalk class Class in the file Class.st defines the subclass creation messages.
     </p>
   </section>
 
