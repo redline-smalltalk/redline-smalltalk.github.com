@@ -1,0 +1,99 @@
+---
+title: Redline Smalltalk Examples
+description: Examples of Redline Smalltalk
+layout: default
+---
+<article>
+  <section>
+    <header><h1>Redline Smalltalk Examples</h1></header>
+    <p>This is a collection of examples and snippets of Redline Smalltalk code. We hope it helps you get things done.</p>
+    <p>
+      This page assumes you have some familarity with Smalltalk as it is not a Learn Smalltalk page.
+      Resources for learning Smalltalk are found in the alternative links <a href="/learn/">here.</a>
+    </p>
+  </section>
+
+  <section>
+    <header><h3>Creating a Class</h3></header>
+    <p>
+    To create a class in Redline Smalltalk create a file to hold the class definition.
+    Convention is a single class definition in a single file, naming the file the same as the class and
+    adding a '.st' file extension. 
+    For example: the class Customer would be defined in the file Customer.st.
+    It is convention to start the name of a class with a capital letter.
+    </p>
+    <p>
+    Below is an example of defining the class Customer using Redline Smalltalk:
+
+{% highlight smalltalk %}
+Object < #Customer.
+{% endhighlight %}
+
+    In the snippet above the class Object is being sent the message '<' with the argument #Customer.
+    The '<' message in Redline is shorthand for the more traditional subclass message 'subclass:instanceVariableNames:classVariableNames:poolDictionaries:category:'.
+    You can use the longer form if you wish. The following is equivalent to the statement above:</p>
+
+{% highlight smalltalk %}
+Object subclass: #Customer
+       instanceVariableNames: ''
+       classVariableNames: ''
+       poolDictionaries: ''
+       category: ''.
+{% endhighlight %}
+<p>
+    In fact the '<' subclass creation message simply sends the longer version.
+    The Smalltalk class Class in the file Class.st defines the subclass creation messages.
+    </p>
+  </section>
+
+  <section>
+    <header><h3>Packages - defining and importing</h3></header>
+    <p>Redline Smalltalk provides a namespace mechanism known as 'packages'. The implementation of packages in Redline closley follows 
+    how packages are defined and used in Java. For more information on Java packages see <a href="http://docs.oracle.com/javase/tutorial/java/package/packages.html">this Lesson</a>.</p>
+    <p>
+    The key difference between Redline Smalltalk packages and Java packages is that the location of a file in the directory tree
+    defines the package in Redline Smalltalk while the 'package' statement defines the package in Java. We prefer the directory tree convention 
+    over more typing. For example:
+{% highlight bash %}
+src/main/smalltalk/com/mydomain/Foo.st
+{% endhighlight %}
+    The class Foo above is in the package 'com.mydomain'. The Redline compiler lets you define from where in the 
+    directory tree packages are to start. In this case src/main/smalltalk.
+    </p>
+    <p>
+    To use a class that is in a different package you need to import it. For example, lets assume the class Customer wants to reference
+    the class Address and the class Address is in the package 'traits':
+{% highlight smalltalk %}
+self import: 'traits.Address'.
+{% endhighlight %}
+    </p>
+    <p>
+    Import statements are typically the first statements in a file. You can have multiple 'import' statements, and you can use wildcards
+    as well.
+{% highlight smalltalk %}
+self import: 'traits.Address';
+     import: 'parts.*'.
+{% endhighlight %}
+    </p>
+    <p>
+    You do not need to import classes you reference that are in the same package as the referring class.
+    This is done for you by Redline Smalltalk.
+    </p>
+    <p>
+    Convention is to import each of the classes you reference rather than use the wildcard.
+    </p>
+    <p>
+    There may come a time when you want to import a class whose name clashes with your class name. In this situation you
+    can use a variation of the 'import:' message 'import:as:'. With this message you can import a class as defined above 
+    but provide a local alias with which you can refer to it.
+    </p>
+{% highlight smalltalk %}
+self import: 'external.Customer' as: 'ExternalCustomer'.
+ExternalCustomer < #Customer ....
+{% endhighlight %}
+    <p>
+    It does not make sense to use wildcards with the 'import:as:' message.
+    </p>
+  </section>
+
+</article>
