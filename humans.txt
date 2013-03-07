@@ -225,7 +225,7 @@
     Steve Sanderson
     Dan Dorman
     Ted Young
-    Sean Allen
+    Sean T Allen
 
 /* SITE */
   Standards: HTML5, CSS3
