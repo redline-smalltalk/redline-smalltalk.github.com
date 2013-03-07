@@ -41,6 +41,192 @@
     Fionna Yao
     Stefan Krecher
 
+/* VISIONARIES */
+  To everyone who has given financial support to Redline:
+    John Connolly
+    Alexander Skobelev
+    Nicolas Kassis
+    Robert Sanders
+    Dave Newton
+    Christopher Petrilli
+    Stuart Herring
+    John Sherwood
+    Brandon Hays
+    Ed Platt 
+    Asgeir Storesund Nilsen
+    Mike Wilson
+    Nick Edgar
+    Andrew Kiellor
+    Michael Melia
+    John K. Paul
+    Tal Rotbart
+    Ryan O'Dwyer
+    Geza Mihala
+    Kyri Sarantakos
+    TJ Singleton
+    Jan Tomsa
+    Simon Raik-Allen
+    Markus Fix
+    Svatopluk Šperka
+    Simon Bristow
+    Ron Welch
+    Johnny T
+    Daniel Wislocki
+    Lukasz Grochocki
+    Joshua Conner
+    Peter Marks
+    Avdi Grimm
+    Leandro Caniglia
+    Dave Mason
+    Klaus Hebsgaard
+    Simon Kirk
+    Orien Madgwick
+    Andy Kitchen
+    Jol blazey
+    Jonathan Winandy
+    Tamer Sezgin
+    Sean Kelley
+    Daniel Austin
+    Victor Volle
+    Steve Hayes
+    Attila Magyar
+    Sven Peters
+    Carin Meier
+    Satish Srinivasan
+    Don Morrison
+    Alexandre Gobeil
+    Brian McCairn
+    Stephen Smith
+    Jose L Bencosme
+    Mark Volkmann
+    Yaroslav Tkachenko
+    Ramon Nogueira
+    Olivier Saut
+    Alexander Dann
+    Stanislav Yaglo
+    Renato Zannon
+    Brian Jenkins
+    Pavel Minaev
+    Michael Wolfe
+    Georgy Lomsadze
+    Frank Siebenlist
+    James Mead
+    Rolf Bjaanes
+    R Tyler Croy
+    Otmar Humbel
+    Marcus Ahnve
+    Daniel Luz
+    Kevin Menard
+    Loren Segal
+    Jacky Chan
+    Karol Bucek
+    Gergely Nagy
+    Charles Oliver Nutter
+    R.T. Lechow
+    Jean-François Héon
+    Timothy Washington
+    Adrian Kuhn
+    Philip Cunningham
+    Hugo Artur Weber Schmitt
+    Greg V.
+    Daniel Lopes
+    Jakeb Kale Rosoman
+    Ioseb Dzmanashvili
+    Koichi Kimura
+    Steve Darveau
+    Ben Coman
+    Eugene Chupriyanov
+    Yi Ming Woo
+    Daniel Higginbotham
+    Sreenivas Ananthakrihna
+    Matthew Erickson
+    Joern Huxhorn
+    Pekka Enberg
+    Kon Soulianidis
+    Armen Polischuk
+    Kai Ching
+    Richard Sargent
+    Benjamin Lallement
+    Rowan Bunning
+    Rob Staenke
+    Stefan Schwetschke
+    Nicholas Faiz
+    Hubert Łępicki
+    Eduard Bondarenko
+    Fred Wu
+    Roman Semenenko
+    Erik Severinsen
+    Henrik Hamelius
+    Fabian Bornhofen
+    Bernat Romagosa Carrasquer
+    Jonathan Chang
+    Alberto
+    Daniel
+    Marius Mathiesen
+    David Vrensk
+    André Bonkowski
+    Otto Pöllath
+    Ricardo Mendes
+    Pietari Kettunen
+    Wolfgang Schell
+    Jorge Uriarte
+    Brian de Alwis
+    Philip J Schwarz
+    Gary Short
+    Eduardo Moritz Cavalcanti
+    Mark Anderson
+    Eric Normand
+    Jesse Cooke
+    Joseph Jones
+    Larry Staton Jr.
+    Martin Haeberli
+    Jason Stahl
+    Robert Roland
+    Stanley Yamane
+    Courtney Correll
+    Alex Chaffee
+    Kathleen Yanolatos
+    Jim Gay
+    Benjamin Moss
+    Christopher Galtenberg
+    Ilya Grigorik
+    Brandon Dewitt
+    Yar Hwee Boon
+    Mel Riffe
+    Aditya Mukerjee
+    Nicholas Levin
+    Hirotsugu Asari
+    Stanley Kurdzie
+    Kjell E Godo
+    Steve Kim
+    Sean DeNigris
+    Marcos Juarez
+    David Zmick
+    Greg Spurrier
+    John LeGrande
+    Jeff Hudren
+    Ethan Sherbondy
+    Alex Feinberg
+    Cagatay Kavukcuoglu
+    Matthew S Ring
+    Joel Jorgensen
+    David bogus
+    Prajwal Tuladhar
+    Galin Yordanov
+    Brian Schroeder
+    Sada Garba
+    Chris Aniszczyk
+    Sam Kottler
+    Mike Davies
+    Nicholas Howard
+    Wai Lun Mang
+    Aemon Cannon
+    Hunter Hutchinson
+    Steve Sanderson
+    Dan Dorman
+    Ted Young
+    Sean Allen
+
 /* SITE */
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery
