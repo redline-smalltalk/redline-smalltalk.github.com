@@ -226,6 +226,7 @@
     Dan Dorman
     Ted Young
     Sean T Allen
+    S.C. NG
 
 /* SITE */
   Standards: HTML5, CSS3
