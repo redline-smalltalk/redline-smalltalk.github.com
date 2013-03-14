@@ -112,7 +112,7 @@
     Frank Siebenlist
     James Mead
     Rolf Bjaanes
-    R Tyler Croy
+    R. Tyler Croy
     Otmar Humbel
     Marcus Ahnve
     Daniel Luz
@@ -183,7 +183,6 @@
     Jason Stahl
     Robert Roland
     Stanley Yamane
-    Courtney Correll
     Alex Chaffee
     Kathleen Yanolatos
     Jim Gay
