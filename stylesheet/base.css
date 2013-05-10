@@ -322,10 +322,15 @@ article img[class='left'] {
   list-style: none;
 }
 
-/* contribute */
+#sponsored-by {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
 
-#contribute li {
-  list-style-type: none;
+.sponsor {
+  float: left;
+  text-align: center;
 }
 
 /* =============================================================================
@@ -391,6 +396,10 @@ article img[class='left'] {
     width: 100%;
   }
   
+  .sponsor {
+    width: 100%;
+  }
+
   #elevator-pitch {
     display: none;
   }  
@@ -404,6 +413,10 @@ article img[class='left'] {
   .ontology {
     width: 100%;
   }
+
+  .sponsor {
+    width: 100%;
+  }  
 }
 
 @media only screen and (min-width: 769px) {
@@ -414,6 +427,10 @@ article img[class='left'] {
   .ontology {
     width: 33%;
   }
+
+  .sponsor {
+    width: 33%;
+  }  
 }
 
 @media only screen and (max-width: 1099px){
