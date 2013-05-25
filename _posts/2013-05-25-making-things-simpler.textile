@@ -10,9 +10,12 @@ published: true
 
 h2. Introduction
 
-Removing the barriers to using Smalltalk is part of what the Redline project is all about and today another step was taken in that direction. The changes that come with this step are big and impact all of the code that has been written to date but the result is a simpler and easier to use Redline. The way you run Redline has changed to use the java classpath to find your Smalltalk files and the codebase has changed to remove a high percentage of static lists and maps which were making it hard to run Redline in a multi-tenancy or multi-language environment. There is also a new suite of Smalltalk tests to exercise each method of the initial Runtime to give you greater confidence in Redline.
+Removing the barriers to using Smalltalk is part of what the Redline project is all about and today another step was taken in that direction. 
 
-h2. Classpath Changes
+
+The changes that come with this step are big and impact all of the code that has been written to date but the result is a simpler and easier to use Redline. The way you run Redline has changed to use the java classpath to find your Smalltalk files and the codebase has changed to remove a high percentage of static lists and maps which were making it hard to run Redline in a multi-tenancy or multi-language environment. There is also a new suite of Smalltalk tests to exercise each method of the initial Runtime to give you greater confidence in Redline.
+
+h2. Using the Classpath
 
 The Java Virtual Machine knows where to find classes via the Classpath which is a value you can specify on the command line when running Java. Redline now uses this Classpath as well to find your .st files. 
 
@@ -24,7 +27,7 @@ java -cp test-classes:lib/redline-0.5-SNAPSHOT.jar:lib/antlr-runtime-3.4.jar:lib
 
 The above represents a much simpler invocation format and fits the current Java model 100%. In the example above the last two arguments are the Redline Smalltalk invoker (Stic) and the Smalltalk to be invoked (TestRunner).
 
-h2. Command Line Arguments to the Compiler
+h2. Compiler Arguments
 
 Previously a few arguments could be given on the command line to ask Redline Smalltalk to output what the compiler was doing or to see bytecode generation. These have also been changed to fit more neatly with the JVM. For example, you could ask the JVM to report where each class is loaded from with the -verbose:class option. 
 
@@ -34,16 +37,19 @@ Redline now uses these options as well to inform the Redline Compiler to output 
 <li>-verbose:stclass Output where each Smalltalk class is loaded from.</li>
 <li>-verbose:stprep  Output the preprocessed Smalltalk source.</li>
 <li>-verbose:stanal  Output the AST analysis.</li>
-<li>-verbise:stbyte  Output what the bytecode generation.</li>
+<li>-verbise:stbyte  Output the bytecodes as they are generated.</li>
 </ul>
 
 Using the -verbose:stprep and -verbose:stanal options can be handy when trying to find a bug or add extra information to a bug report.
 
 h2. More Tests
 
-Along with the recent big changes comes a more strict approach on developing the Redline runtime. No more un-tested contributions will be accepted. Every method of every Smalltalk class in the runtime must have a corresponding test. You can see the start of this by looking at the Redline source folder src/test/smalltalk. Running the tests for the Runtime is part of the success of failure of the Redline build.
+Along with the recent big changes comes a more strict approach on developing the Redline runtime. No more un-tested contributions will be accepted. Every method of every Smalltalk class in the runtime must have a corresponding test. You can see the start of this by looking at the Redline source folder src/test/smalltalk. Running the tests for the Runtime is part of the success criteria for the Redline build.
 
-This change also means that some of the code previously contributed by people has been 'suspended' until it can be put back into the Runtime with supporting tests. Please contact Redline if you would like to help with this.
+This change also means that some of the code previously contributed by people has been 'put aside' until it can be put back into the Runtime with supporting tests. Please contact Redline if you would like to help with this.
 
 
+h2. Summary
 
+These changes streamline Redline and make it simpler and its is hoped you can see Redline is positioned for a much faster way forward and a brighter future.
+ 
