@@ -33,7 +33,7 @@ Hello World from Redline Smalltalk.
 </p>
 
 <p>
-To execute your own Smalltalk code create a file with a '.st' extension using your favourite editor and then execute it with the 'stic' command. Note: Don't add the '.st' when executing with 'stic'. Run 'stic' without arguments for a list of stic options. Open the HelloWorld.st file to see an example of Smalltalk code.
+To execute your own Smalltalk code create a file with a '.st' extension using your favourite editor and then execute it with the 'stic' command. Note: Don't add the '.st' when executing with 'stic'. Open the HelloWorld.st file to see an example of Smalltalk code.
 </p>
 
 <header><h1>Quick Start - Executing Smalltalk Tests</h1></header>
@@ -41,11 +41,11 @@ To execute your own Smalltalk code create a file with a '.st' extension using yo
 When you want to run the Smalltalk Test Suite to ensure the runtime is working as expected you need to do the above quick start then issue the following command on your command line / shell. Note: When you build Redline from the sources the Smalltalk Test Suite is automatically run with each build.
 
 {% highlight bash %}
->./stic -s test/ st.redline.core.TestRunner
+>./stic st.redline.kernel.TestRunner
 {% endhighlight %}
 </p>
 <p>
-If you have decided to adopt a class and help Redline then you need to create a '.st' file in the corresponding folder under the 'rt' folder, and you need to put the associated test under the 'test' folder. For example, if you have adopted the Date class then you would create the 'Date.st' file that defines the Date class in the <i>'rt/st/redline/core'</i> folder, and a 'DateTest.st' file in the <i>'test/st/redline/core'</i> folder.</p>
+If you have decided to adopt a class and help Redline then you need to create a '.st' file in the corresponding folder under the 'rt' folder, and you need to put the associated test under the 'test' folder. For example, if you have adopted the Date class then you would create the 'Date.st' file that defines the Date class in the <i>'rt/st/redline/kernel'</i> folder, and a 'DateTest.st' file in the <i>'test/st/redline/kernel'</i> folder.</p>
 <p>
 Don't forget that you may need to edit the <i>'test/st/redline/core/TestSuite.st'</i> file to ensure your test is run as part of the suite.</p>
 <p>
