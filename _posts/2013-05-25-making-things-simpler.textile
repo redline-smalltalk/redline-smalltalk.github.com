@@ -22,4 +22,15 @@ java -cp test-classes:lib/redline-0.5-SNAPSHOT.jar:lib/antlr-runtime-3.4.jar:lib
 
 The above represents a much simpler invocation format and fits the current Java model 100%. In the example above the last two arguments are the Redline Smalltalk invoker (Stic) and the Smalltalk to be invoked (TestRunner).
 
+h2. Command Line Arguments to the Compiler
+
+A few arguments could be given on the command line to ask Redline Smalltalk to output what the compiler was doing or to see bytecode generation. These have also been changed to fit more neatly with the JVM. For example, to ask the JVM to report where each class is loaded from with the -verbose:class option. Redline now uses these options as well to inform the Redline Compiler to output verbose information about what it is doing. You add a -verbose option on the command line just before or just after the -cp for the classpath. The options you can now specify are:
+
+<ul>
+<li>-verbose:stclass Output where each Smalltalk class is loaded from.</li>
+<li>-verbose:stprep  Output the preprocessed Smalltalk source.</li>
+<li>-verbose:stanal  Output the AST analysis.</li>
+<li>-verbise:stbyte  Output what the bytecode generation.</li>
+</ul>
+
 
