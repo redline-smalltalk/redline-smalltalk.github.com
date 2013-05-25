@@ -20,7 +20,7 @@ Follow these instructions to be executing Smalltalk code with Redline Smalltalk 
 >wget https://github.com/redline-smalltalk/redline-smalltalk.github.com/raw/master/assets/redline-deploy.zip
 >unzip redline-deploy.zip -d redline
 >cd redline
->./stic st.redline.example.HelloWorld 
+>java -cp test-classes:lib/redline-0.5-SNAPSHOT.jar:lib/antlr-runtime-3.4.jar:lib/asm-4.1.jar st.redline.Stic st.redline.example.HelloWorld 
 {% endhighlight %}
 </p>
 
@@ -41,7 +41,7 @@ To execute your own Smalltalk code create a file with a '.st' extension using yo
 When you want to run the Smalltalk Test Suite to ensure the runtime is working as expected you need to do the above quick start then issue the following command on your command line / shell. Note: When you build Redline from the sources the Smalltalk Test Suite is automatically run with each build.
 
 {% highlight bash %}
->./stic st.redline.kernel.TestRunner
+>java -cp test-classes:lib/redline-0.5-SNAPSHOT.jar:lib/antlr-runtime-3.4.jar:lib/asm-4.1.jar st.redline.Stic st.redline.kernel.TestRunner
 {% endhighlight %}
 </p>
 <p>
@@ -146,7 +146,7 @@ to follow these steps from your command prompt from within the 'redline-deploy' 
 {% highlight bash %}
 >cd target/redline-deploy/
 >export REDLINE_HOME=`cd "$REDLINE_HOME" > /dev/null && pwd`
->./stic -s examples/ st.redline.HelloWorld
+>java -cp test-classes:lib/redline-0.5-SNAPSHOT.jar:lib/antlr-runtime-3.4.jar:lib/asm-4.1.jar st.redline.Stic st.redline.example.HelloWorld
 {% endhighlight %}
 </p>
 
@@ -164,20 +164,6 @@ files in sub-folders that correspond to the namespace of the class or script. So
 'st/redline'.  Please take a moment to look at the contents of this file.
 </p>
 
-<p>
-If you run 'stic' without arguments you will see some usage information, from which you can see how to run scripts with sources
-and libraries in different locations. The usage looks like this:
-{% highlight bash %}
-usage: stic [options] <source files>
- -?,--help       print this message.
- -e <input>      execute the Smalltalk code (enclosed in "" double quotes).
- -r <path>       where to find Redline. Defaults to environment REDLINE_HOME.
- -s <paths>      where to find input source files. Separate each path with :.
-                 The paths src/main/smalltalk and src/test/smalltalk are
-                 included by default. Ignored if -e specified.
- -v,--verbose    output messages about what Redline is doing.
-{% endhighlight %}
-</p>
 <p>
 This process has got the latest Redline Smalltalk source code, built it and ran a Smalltalk example. You may want to put the
 resulting Redline Smalltalk code elsewhere on your system. If you do want to do this then copy the entire redline-deploy folder to
