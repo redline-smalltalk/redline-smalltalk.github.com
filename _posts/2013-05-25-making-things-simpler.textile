@@ -13,7 +13,9 @@ h2. Introduction
 Removing the barriers to using Smalltalk is part of what the Redline project is all about and today another step was taken in that direction. 
 
 
-The changes that come with this step are big and impact all of the code that has been written to date but the result is a simpler and easier to use Redline. The way you run Redline has changed to use the java classpath to find your Smalltalk files and the codebase has changed to remove a high percentage of static lists and maps which were making it hard to run Redline in a multi-tenancy or multi-language environment. There is also a new suite of Smalltalk tests to exercise each method of the initial Runtime to give you greater confidence in Redline.
+The changes that come with this step are big and impact all of the code that has been written to date but the result is a simpler and easier to use Redline. The way you run Redline has changed to use the java classpath to find your Smalltalk files and the codebase has changed to remove a high percentage of static lists and maps which were making it hard to run Redline in a multi-tenancy or multi-language environment. 
+
+There is also a new suite of Smalltalk tests to exercise each method of the initial Runtime to give you greater confidence in Redline.
 
 h2. Using the Classpath
 
