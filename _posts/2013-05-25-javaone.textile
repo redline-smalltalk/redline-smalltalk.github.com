@@ -10,6 +10,6 @@ published: true
 
 h2. Introduction
 
-In September 2013 James presented at the Java One conference in San Francisco USA. Above is the costume he wore while presenting because anyone can just give a talk.
+In September 2013 James presented at the Java One conference in San Francisco USA. Above is the costume he wore while presenting because anyone can just give a talk.<br>
 The slides from that presentation are <a href='#'>here</a>. 
 
