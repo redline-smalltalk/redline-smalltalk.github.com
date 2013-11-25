@@ -1,0 +1,15 @@
+---
+title: JavaOne 2013 Presentation
+summary: Building a compiler for the JVM with a tour of Redline Smalltalk.
+author: James Ladd
+layout: post
+published: true
+---
+
+<img src="/image/blog/javaone-costume.png" alt="Costume" class="left">
+
+h2. Introduction
+
+In September 2013 James presented at the Java One conference in San Francisco USA. Above is the costume he wore while presenting because anyone can just give a talk.
+The slides from that presentation are <a href='#'>here</a>. 
+
