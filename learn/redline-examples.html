@@ -26,11 +26,11 @@ layout: default
     Below is an example of defining the class Customer using Redline Smalltalk:
 
 {% highlight smalltalk %}
-Object < #Customer.
+Object subclass: #Customer.
 {% endhighlight %}
 
-    In the snippet above the class Object is being sent the message '<' with the argument #Customer.
-    The '<' message in Redline is shorthand for the more traditional subclass message 'subclass:instanceVariableNames:classVariableNames:poolDictionaries:category:'.
+    In the snippet above the class Object is being sent the message 'subclass:' with the argument #Customer.
+    The 'subclass:' message in Redline is shorthand for the more traditional subclass message 'subclass:instanceVariableNames:classVariableNames:poolDictionaries:category:'.
     You can use the longer form if you wish. The following is equivalent to the statement above:</p>
 
 {% highlight smalltalk %}
@@ -41,7 +41,7 @@ Object subclass: #Customer
        category: ''.
 {% endhighlight %}
 <p>
-    In fact the '<' subclass creation message simply sends the longer version.
+    In fact the 'subclass:' subclass creation message simply sends the longer version.
     The Smalltalk class Class in the file Class.st defines the subclass creation messages.
     </p>
   </section>
@@ -89,7 +89,7 @@ self import: 'traits.Address';
     </p>
 {% highlight smalltalk %}
 self import: 'external.Customer' as: 'ExternalCustomer'.
-ExternalCustomer < #Customer ....
+ExternalCustomer subclass: #Customer ....
 {% endhighlight %}
     <p>
     It does not make sense to use wildcards with the 'import:as:' message.
