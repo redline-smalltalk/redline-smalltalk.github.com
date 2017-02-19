@@ -102,7 +102,7 @@ layout: default
             command:
 
             {% highlight bash %}
-            > mvn clean install
+            > mvn clean package
             {% endhighlight %}
         </p>
 
@@ -136,7 +136,7 @@ layout: default
             to follow these steps from your command prompt:
 
             {% highlight bash %}
-            >java -jar redline-0.6-SNAPSHOT.jar st.redline.script.HelloWorld
+            >java -jar target/redline-0.6-SNAPSHOT.jar st.redline.script.HelloWorld
             {% endhighlight %}
         </p>
             You should see the following message from Redline Smalltalk (CURRENTLY WITH A LOT OF DEBUG):
