@@ -20,12 +20,12 @@ layout: default
             >wget https://github.com/redline-smalltalk/redline-smalltalk.github.com/raw/master/assets/redline-deploy.zip
             >unzip redline-deploy.zip -d redline
             >cd redline
-            >./stic st.redline.example.HelloWorld
+            >java -jar redline-0.6-SNAPSHOT.jar st.redline.example.HelloWorld
             {% endhighlight %}
         </p>
 
         <p>
-            You should see the following message from Redline Smalltalk:
+            You should see the following message from Redline Smalltalk (CURRENTLY with a lot of debug output):
 
             {% highlight bash %}
             Hello World from Redline Smalltalk.
@@ -33,17 +33,9 @@ layout: default
         </p>
 
         <p>
-            To execute your own Smalltalk code create a file with a '.st' extension using your favourite editor and then execute it with the 'stic' command. Note: Don't add the '.st' when executing with 'stic'. Open the HelloWorld.st file to see an example of Smalltalk code.
+            To execute your own Smalltalk code create a file with a '.st' extension using your favourite editor and then execute it with the above 'java -jar' command. Note: Don't add the '.st' when executing with 'stic'. Open the HelloWorld.st file to see an example of Smalltalk code.
         </p>
 
-        <header><h1>Quick Start - Executing Smalltalk Tests</h1></header>
-        <p>
-            When you want to run the Smalltalk Test Suite to ensure the runtime is working as expected you need to do the above quick start then issue the following command on your command line / shell. Note: When you build Redline from the sources the Smalltalk Test Suite is automatically run with each build.
-
-            {% highlight bash %}
-            >./stic st.redline.kernel.TestRunner
-            {% endhighlight %}
-        </p>
         <p>
             If you have decided to adopt a class and help Redline then you need to create a '.st' file in the corresponding folder under the 'rt' folder, and you need to put the associated test under the 'test' folder. For example, if you have adopted the Date class then you would create the 'Date.st' file that defines the Date class in the <i>'rt/st/redline/kernel'</i> folder, and a 'DateTest.st' file in the <i>'test/st/redline/kernel'</i> folder.</p>
         <p>
@@ -130,7 +122,7 @@ layout: default
 
         <p>
             This process has built and Redline Smalltalk Java Archive and run a few tests against it. All of the build outputs we care
-            about are in the 'target/redline-deploy' sub-folder.
+            about are in the 'target' sub-folder.
         </p>
     </section>
 
@@ -141,17 +133,13 @@ layout: default
             Redline Smalltalk comes with a few examples and one such example is a simple 'Hello World' script that displays a message
             on your screen. Note that this is 'Hello World' example is a Smalltalk script and not a class, as Redline Smalltalk can be used
             for simple scripts as well as full applications. Of course there are example classes as well. To execute the example you need
-            to follow these steps from your command prompt from within the 'redline-deploy' sub-folder:
+            to follow these steps from your command prompt:
 
             {% highlight bash %}
-            >cd target/redline-deploy/
-            >export REDLINE_HOME=`cd "$REDLINE_HOME" > /dev/null && pwd`
-            >./stic -s examples/ st.redline.HelloWorld
+            >java -jar redline-0.6-SNAPSHOT.jar st.redline.script.HelloWorld
             {% endhighlight %}
         </p>
-
-        <p>
-            You should see the following message from Redline Smalltalk:
+            You should see the following message from Redline Smalltalk (CURRENTLY WITH A LOT OF DEBUG):
 
             {% highlight bash %}
             Hello World from Redline Smalltalk.
@@ -159,25 +147,11 @@ layout: default
         </p>
 
         <p>
-            You can see the script for the Hello World example under the 'examples' sub-folder. By convention Redline and Java keep source
+            You can see the script for the Hello World example under the 'script' sub-folder. By convention Redline and Java keep source
             files in sub-folders that correspond to the namespace of the class or script. So HelloWorld.st can be found in the sub-folder
             'st/redline'.  Please take a moment to look at the contents of this file.
         </p>
 
-        <p>
-            If you run 'stic' without arguments you will see some usage information, from which you can see how to run scripts with sources
-            and libraries in different locations. The usage looks like this:
-            {% highlight bash %}
-            usage: stic [options] <source files>
-            -?,--help       print this message.
-            -e <input>      execute the Smalltalk code (enclosed in "" double quotes).
-            -r <path>       where to find Redline. Defaults to environment REDLINE_HOME.
-            -s <paths>      where to find input source files. Separate each path with :.
-                The paths src/main/smalltalk and src/test/smalltalk are
-                included by default. Ignored if -e specified.
-                -v,--verbose    output messages about what Redline is doing.
-                {% endhighlight %}
-        </p>
         <p>
             This process has got the latest Redline Smalltalk source code, built it and ran a Smalltalk example. You may want to put the
             resulting Redline Smalltalk code elsewhere on your system. If you do want to do this then copy the entire redline-deploy folder to
